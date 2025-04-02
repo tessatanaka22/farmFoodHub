@@ -3,15 +3,24 @@
   padding: 0;
   box-sizing: border-box;
 }
-p {
+.how-it-works h2 {
+  color: orange;
   text-align: center;
+}
+.donate p {
+  text-align: center;
+  padding: 30px;
+}
+.sign-up p {
+  text-align: center;
+  padding: 30px;
 }
 .how {
   display: flex;
   justify-content: space-evenly;
   padding: 30px;
 }
-.how-to-join {
+.how-it-works {
   padding: 30px;
 }
 .why {
@@ -31,15 +40,18 @@ h2 {
   background-color: rgb(98, 242, 98);
   color: white;
   text-align: center;
+  padding: 30px;
 }
 .donate button {
   background-color: white;
   border-radius: 5px;
   text-align: center;
   padding: 12px;
+  border: 2px solid white;
 }
 .sign-up {
   text-align: center;
+  padding: 30px;
 }
 .sign-up button {
   background-color: black;

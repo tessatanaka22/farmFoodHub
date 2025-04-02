@@ -33,11 +33,11 @@ h2 {
 }
 .why-join {
   padding: 30px;
-  background-color: rgb(179, 230, 213);
+  background-color: rgb(220, 244, 236);
   text-align: center;
 }
 .donate {
-  background-color: rgb(98, 242, 98);
+  background-color: rgb(80, 173, 80);
   color: white;
   text-align: center;
   padding: 30px;
@@ -70,4 +70,15 @@ h2 {
 .quick-links a {
   text-decoration: none;
   color: whitesmoke;
+}
+.support a {
+  text-decoration: none;
+  color: white;
+}
+.icons {
+  display: flex;
+  gap: 16px;
+}
+hr {
+  border: 2px solid white;
 }

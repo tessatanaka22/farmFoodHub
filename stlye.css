@@ -9,8 +9,53 @@ p {
 .how {
   display: flex;
   justify-content: space-evenly;
+  padding: 30px;
+}
+.how-to-join {
+  padding: 30px;
 }
 .why {
   display: flex;
   justify-content: space-evenly;
+  padding: 30px;
+}
+h2 {
+  text-align: center;
+}
+.why-join {
+  padding: 30px;
+  background-color: rgb(179, 230, 213);
+  text-align: center;
+}
+.donate {
+  background-color: rgb(98, 242, 98);
+  color: white;
+  text-align: center;
+}
+.donate button {
+  background-color: white;
+  border-radius: 5px;
+  text-align: center;
+  padding: 12px;
+}
+.sign-up {
+  text-align: center;
+}
+.sign-up button {
+  background-color: black;
+  color: whitesmoke;
+  border-radius: 5px;
+  padding: 8px;
+  text-align: center;
+}
+.foot {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: rgb(13, 13, 26);
+  color: whitesmoke;
+  padding: 50px;
+}
+.quick-links a {
+  text-decoration: none;
+  color: whitesmoke;
 }

@@ -21,7 +21,8 @@
   padding: 30px;
 }
 .how-it-works {
-  padding: 30px;
+  padding: 50px;
+  text-align: center;
 }
 .why {
   display: flex;
@@ -32,7 +33,7 @@ h2 {
   text-align: center;
 }
 .why-join {
-  padding: 30px;
+  padding: 50px;
   background-color: rgb(220, 244, 236);
   text-align: center;
 }
@@ -40,7 +41,7 @@ h2 {
   background-color: rgb(80, 173, 80);
   color: white;
   text-align: center;
-  padding: 30px;
+  padding: 50px;
 }
 .donate button {
   background-color: white;

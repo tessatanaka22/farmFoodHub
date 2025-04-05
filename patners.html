@@ -86,6 +86,51 @@
           </div>
         </div>
       </section>
+      <section class="partnering-form">
+        <form>
+          <h2>Partner Registration</h2>
+          <label>Business Name</label>
+          <input type="text" name="businessName" required />
+
+          <label>Create Password</label>
+          <input
+            type="password"
+            name="password"
+            placeholder="Create strong password"
+            required
+          />
+
+          <label>Confirm Password</label>
+          <input
+            type="password"
+            name="confirmPassword"
+            placeholder="retype password"
+            required
+          />
+
+          <label>Business type</label>
+          <select name="bubinessType1" id="businessType1" required>
+            <option value="restaurant">Restaurant</option>
+            <option value="farm">Farm</option>
+            <option value="retail">Retail</option>
+          </select>
+
+          <label>Location</label>
+          <input type="text" name="location" required />
+
+          <label>Description of Service</label>
+          <textarea name="description" rows="4" required></textarea>
+
+          <label>Business documents</label>
+          <input type="file" name="documents" required />
+
+          <button type="submit">Submit Application</button>
+
+          <div class="signin">
+            Already have an account? <a href="">sign in</a>
+          </div>
+        </form>
+      </section>
     </main>
   </body>
 </html>

@@ -37,7 +37,7 @@ nav ul li a:hover {
 }
 
 .nav-buttons {
-    margin-top: 10px;
+    margin-top: 24px;
 }
 
 .nav-buttons .login {
@@ -46,6 +46,7 @@ nav ul li a:hover {
     color: #1c1d1c;
     padding: 10px 20px;
     cursor: pointer;
+    text-decoration: none;
     border-radius: 5px;
     transition: 0.3s;
     margin-right: 16px;
@@ -57,6 +58,7 @@ nav ul li a:hover {
     color: #f5f5f5;
     padding: 10px 20px;
     border: none;
+    text-decoration: none;
     cursor: pointer;
     border-radius: 5px;
     transition: 0.3s;
@@ -65,14 +67,17 @@ nav ul li a:hover {
 
 .nav-buttons .login:hover {
     background-color: #4CAF50;
-    color: #f5f5f5;
+    color: white;
 }
 
 .nav-buttons .signup:hover {
-    background-color: #f5f5f5;
+    background-color: white;
     color: #4CAF50;
     border: 1px solid #4CAF50;
 }
+
+
+
 
 /* Main body */
 .main {
@@ -165,6 +170,7 @@ nav ul li a:hover {
 .contact-icon {
     display: flex;
     gap: 10px;
+    color: orange;
 }
 
 .first-row .business-hours {

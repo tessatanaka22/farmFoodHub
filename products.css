@@ -37,7 +37,7 @@ nav ul li a:hover {
 }
 
 .nav-buttons {
-    margin-top: 10px;
+    margin-top: 24px;
 }
 
 .nav-buttons .login {
@@ -46,6 +46,7 @@ nav ul li a:hover {
     color: #1c1d1c;
     padding: 10px 20px;
     cursor: pointer;
+    text-decoration: none;
     border-radius: 5px;
     transition: 0.3s;
     margin-right: 16px;
@@ -57,6 +58,7 @@ nav ul li a:hover {
     color: #f5f5f5;
     padding: 10px 20px;
     border: none;
+    text-decoration: none;
     cursor: pointer;
     border-radius: 5px;
     transition: 0.3s;
@@ -65,11 +67,11 @@ nav ul li a:hover {
 
 .nav-buttons .login:hover {
     background-color: #4CAF50;
-    color: #f5f5f5;
+    color: white;
 }
 
 .nav-buttons .signup:hover {
-    background-color: #f5f5f5;
+    background-color: white;
     color: #4CAF50;
     border: 1px solid #4CAF50;
 }
@@ -177,6 +179,126 @@ nav ul li a:hover {
 
        
 
+/* main body section */
+        .main-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            padding: 20px;
+            justify-content: space-evenly;
+            margin: 40px 40px;
+        }
+    
+        .livestock-div {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 15px;
+            width: calc(33.33% - 40px);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+    
+        .poultry-div {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 15px;
+            width: calc(33.33% - 40px);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .grains-div {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 15px;
+            width: calc(33.33% - 40px);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .vegatables-div {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 15px;
+            width: calc(33.33% - 40px);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .dairy-div {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 15px;
+            width: calc(33.33% - 40px);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .roots-div {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 15px;
+            width: calc(33.33% - 40px);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+    
+        .title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+    
+        .see-all {
+            font-size: 14px;
+            color: #333;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+    
+        .arrow-icon {
+            font-size: 15px;
+        }
+    
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+    
+        .image-grid img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            object-fit: cover;
+        }
+    
+        /* Responsive design */
+        @media (max-width: 1200px) {
+            .livestock-div {
+                width: calc(50% - 20px);
+            }
+        }
+    
+        @media (max-width: 768px) {
+            .livestock-div {
+                width: 100%;
+            }
+        }
+/* end of main body section */
 
 /* Footer */
 footer {
@@ -293,3 +415,4 @@ hr {
     margin-top: 20px;
     margin-bottom: 40px;
 }
+/* end of footer */

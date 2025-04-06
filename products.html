@@ -28,8 +28,8 @@
             </ul>
         </nav>
         <div class="nav-buttons">
-            <button class="login">Login</button>
-            <button class="signup">Sign Up</button>
+          <a href="login.html" class="login">Login</a>
+          <a href="signup.html" class="signup">Sign Up</a>
         </div>
     </header>
     <!-- end header -->
@@ -37,64 +37,164 @@
     <!-- Main Body -->
      <main>
         <!-- search bar section -->
-  <div class="section">
-    <!-- Search Bar -->
-    <div class="search-container">
-      <input type="text" class="search-input" placeholder="Search">
-      <i class="fas fa-search search-icon"></i>
-    </div>
+        <div class="section">
+          <!-- Search Bar -->
+          <div class="search-container">
+            <input type="text" class="search-input" placeholder="Search">
+            <i class="fas fa-search search-icon"></i>
+          </div>
 
-    <!-- Dropdowns -->
-    <div class="dropdown-container">
-      <!-- Sort By Dropdown -->
-      <div class="dropdown sort-by" onclick="toggleDropdown(this)">
-        <button class="dropdown-button">
-          Sort by: Newest <span class="dropdown-arrow">▼</span>
-        </button>
-        <div class="dropdown-content">
-          <div onclick="selectOption(this)">Oldest</div>
-          <div onclick="selectOption(this)">By Date Added</div>
-        </div>
-      </div>
+          <!-- Dropdowns -->
+          <div class="dropdown-container">
+            <!-- Sort By Dropdown -->
+            <div class="dropdown sort-by" onclick="toggleDropdown(this)">
+              <button class="dropdown-button">
+                Sort by: Newest <span class="dropdown-arrow">▼</span>
+              </button>
+              <div class="dropdown-content">
+                <div onclick="selectOption(this)">Oldest</div>
+                <div onclick="selectOption(this)">By Date Added</div>
+              </div>
+            </div>
 
-      <!-- All Categories Dropdown -->
-      <div class="dropdown categories" onclick="toggleDropdown(this)">
-        <button class="dropdown-button">
-          All Categories <span class="dropdown-arrow">▼</span>
-        </button>
-        <div class="dropdown-content">
-          <div onclick="selectOption(this)">Foodstuff</div>
-          <div onclick="selectOption(this)">Grains</div>
-        </div>
-      </div>
+            <!-- All Categories Dropdown -->
+            <div class="dropdown categories" onclick="toggleDropdown(this)">
+              <button class="dropdown-button">
+                All Categories <span class="dropdown-arrow">▼</span>
+              </button>
+              <div class="dropdown-content">
+                <div onclick="selectOption(this)">Foodstuff</div>
+                <div onclick="selectOption(this)">Grains</div>
+              </div>
+            </div>
 
-      <!-- Price Range Dropdown -->
-      <div class="dropdown" onclick="toggleDropdown(this)">
-        <button class="dropdown-button">
-          Price Range <span class="dropdown-arrow">▼</span>
-        </button>
-        <div class="dropdown-content">
-          <div onclick="selectOption(this)">Low to High</div>
-          <div onclick="selectOption(this)">High to Low</div>
-        </div>
-      </div>
+            <!-- Price Range Dropdown -->
+            <div class="dropdown" onclick="toggleDropdown(this)">
+              <button class="dropdown-button">
+                Price Range <span class="dropdown-arrow">▼</span>
+              </button>
+              <div class="dropdown-content">
+                <div onclick="selectOption(this)">Low to High</div>
+                <div onclick="selectOption(this)">High to Low</div>
+              </div>
+            </div>
 
-      <!-- Location Dropdown -->
-      <div class="dropdown" onclick="toggleDropdown(this)">
-        <button class="dropdown-button">
-          Location <span class="dropdown-arrow">▼</span>
-        </button>
-        <div class="dropdown-content">
-          <div onclick="selectOption(this)">New York</div>
-          <div onclick="selectOption(this)">Los Angeles</div>
-          <div onclick="selectOption(this)">Chicago</div>
+            <!-- Location Dropdown -->
+            <div class="dropdown" onclick="toggleDropdown(this)">
+              <button class="dropdown-button">
+                Location <span class="dropdown-arrow">▼</span>
+              </button>
+              <div class="dropdown-content">
+                <div onclick="selectOption(this)">New York</div>
+                <div onclick="selectOption(this)">Los Angeles</div>
+                <div onclick="selectOption(this)">Chicago</div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </div>
         <!-- end of search bar section -->
 
+        <!-- Main body section -->
+        <div class="main-section">
+          <!-- Div 1 -->
+          <div class="livestock-div">
+            <div class="header">
+              <span class="title">Livestock</span>
+              <a href="#" class="see-all">
+                See All <i class="arrow-icon">→</i>
+              </a>
+            </div>
+            <div class="image-grid">
+              <img src="https://via.placeholder.com/150" alt="Image 1">
+              <img src="https://via.placeholder.com/150" alt="Image 2">
+              <img src="https://via.placeholder.com/150" alt="Image 3">
+              <img src="https://via.placeholder.com/150" alt="Image 4">
+            </div>
+          </div>
+        
+          <!-- Div 2 -->
+          <div class="poultry-div">
+            <div class="header">
+              <span class="title">Poultry</span>
+              <a href="#" class="see-all">
+                See All <i class="arrow-icon">→</i>
+              </a>
+            </div>
+            <div class="image-grid">
+              <img src="https://via.placeholder.com/150" alt="Image 1">
+              <img src="https://via.placeholder.com/150" alt="Image 2">
+              <img src="https://via.placeholder.com/150" alt="Image 3">
+              <img src="https://via.placeholder.com/150" alt="Image 4">
+            </div>
+          </div>
+        
+          <!-- Div 3 -->
+          <div class="grains-div">
+            <div class="header">
+              <span class="title">Grains & Cereals</span>
+              <a href="#" class="see-all">
+                See All <i class="arrow-icon">→</i>
+              </a>
+            </div>
+            <div class="image-grid">
+              <img src="https://via.placeholder.com/150" alt="Image 1">
+              <img src="https://via.placeholder.com/150" alt="Image 2">
+              <img src="https://via.placeholder.com/150" alt="Image 3">
+              <img src="https://via.placeholder.com/150" alt="Image 4">
+            </div>
+          </div>
+        
+          <!-- Div 4 -->
+          <div class="vegatables-div">
+            <div class="header">
+              <span class="title">Vegetables & Fruits</span>
+              <a href="#" class="see-all">
+                See All <i class="arrow-icon">→</i>
+              </a>
+            </div>
+            <div class="image-grid">
+              <img src="https://via.placeholder.com/150" alt="Image 1">
+              <img src="https://via.placeholder.com/150" alt="Image 2">
+              <img src="https://via.placeholder.com/150" alt="Image 3">
+              <img src="https://via.placeholder.com/150" alt="Image 4">
+            </div>
+          </div>
+        
+          <!-- Div 5 -->
+          <div class="dairy-div">
+            <div class="header">
+              <span class="title">Dairy & Farm Products</span>
+              <a href="#" class="see-all">
+                See All <i class="arrow-icon">→</i>
+              </a>
+            </div>
+            <div class="image-grid">
+              <img src="https://via.placeholder.com/150" alt="Image 1">
+              <img src="https://via.placeholder.com/150" alt="Image 2">
+              <img src="https://via.placeholder.com/150" alt="Image 3">
+              <img src="https://via.placeholder.com/150" alt="Image 4">
+            </div>
+          </div>
+        
+          <!-- Div 6 -->
+          <div class="roots-div">
+            <div class="header">
+              <span class="title">Roots & Tubers</span>
+              <a href="#" class="see-all">
+                See All <i class="arrow-icon">→</i>
+              </a>
+            </div>
+            <div class="image-grid">
+              <img src="https://via.placeholder.com/150" alt="Image 1">
+              <img src="https://via.placeholder.com/150" alt="Image 2">
+              <img src="https://via.placeholder.com/150" alt="Image 3">
+              <img src="https://via.placeholder.com/150" alt="Image 4">
+            </div>
+          </div>
+        </div>
 
+         <!-- end of main body section -->
+        
 
      </main>
     <!-- Footer -->

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FarmFoodHub</title>
+    <link rel="stylesheet" href="./products.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <!-- start header -->
+    <header>
+        <div class="logo">
+            <img src="/img/logo.png" alt="FarmFoodHub Logo" />
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="partners.html">Partners</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="nav-buttons">
+            <button class="login">Login</button>
+            <button class="signup">Sign Up</button>
+        </div>
+    </header>
+    <!-- end header -->
+
+    <!-- Main Body -->
+     <main>
+        <!-- search bar section -->
+  <div class="section">
+    <!-- Search Bar -->
+    <div class="search-container">
+      <input type="text" class="search-input" placeholder="Search">
+      <i class="fas fa-search search-icon"></i>
+    </div>
+
+    <!-- Dropdowns -->
+    <div class="dropdown-container">
+      <!-- Sort By Dropdown -->
+      <div class="dropdown sort-by" onclick="toggleDropdown(this)">
+        <button class="dropdown-button">
+          Sort by: Newest <span class="dropdown-arrow">▼</span>
+        </button>
+        <div class="dropdown-content">
+          <div onclick="selectOption(this)">Oldest</div>
+          <div onclick="selectOption(this)">By Date Added</div>
+        </div>
+      </div>
+
+      <!-- All Categories Dropdown -->
+      <div class="dropdown categories" onclick="toggleDropdown(this)">
+        <button class="dropdown-button">
+          All Categories <span class="dropdown-arrow">▼</span>
+        </button>
+        <div class="dropdown-content">
+          <div onclick="selectOption(this)">Foodstuff</div>
+          <div onclick="selectOption(this)">Grains</div>
+        </div>
+      </div>
+
+      <!-- Price Range Dropdown -->
+      <div class="dropdown" onclick="toggleDropdown(this)">
+        <button class="dropdown-button">
+          Price Range <span class="dropdown-arrow">▼</span>
+        </button>
+        <div class="dropdown-content">
+          <div onclick="selectOption(this)">Low to High</div>
+          <div onclick="selectOption(this)">High to Low</div>
+        </div>
+      </div>
+
+      <!-- Location Dropdown -->
+      <div class="dropdown" onclick="toggleDropdown(this)">
+        <button class="dropdown-button">
+          Location <span class="dropdown-arrow">▼</span>
+        </button>
+        <div class="dropdown-content">
+          <div onclick="selectOption(this)">New York</div>
+          <div onclick="selectOption(this)">Los Angeles</div>
+          <div onclick="selectOption(this)">Chicago</div>
+        </div>
+      </div>
+    </div>
+  </div>
+        <!-- end of search bar section -->
+
+
+
+     </main>
+    <!-- Footer -->
+    <footer>
+        <div class="first-row">
+            <img src="/img/logo.png" alt="logo" />
+            <p>Connecting farmers, consumers, and food banks for a sustainable future
+            </p>
+            <div class="social-icons-footer">
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-twitter twitter"></i>
+                <i class="fab fa-instagram instagram"></i>
+                <i class="fab fa-linkedin"></i>
+            </div>
+        </div>
+    
+        <div class="second-row">
+            <h3>Quick Links</h3>
+            <p>Home</p>
+            <p>About Us</p>
+            <p>Shop</p>
+    
+        </div>
+    
+        <div class="third-row">
+            <h3>Your Role</h3>
+            <p>Farmer</p>
+            <p>Consumer</p>
+            <p>Food Bank</p>
+            <p>Donor</p>
+        </div>
+    
+        <div class="fourth-row">
+            <h3>Support</h3>
+            <p>FAQs</p>
+            <p>Privacy Policy</p>
+            <p>Terms of Service</p>
+            <p>Contact Us</p>
+        </div>
+    </footer>
+    <hr>
+    <div class="footer-bottom">
+        <p>&copy; 2025 FarmFoodHub. All rights reserved.</p>
+    </div>
+    <!-- end of footer -->
+</body>
+
+<script>
+    // Get all dropdowns
+    const dropdowns = document.querySelectorAll('.dropdown');
+
+    // Function to close all dropdowns
+    function closeAllDropdowns() {
+        dropdowns.forEach(dropdown => {
+            dropdown.classList.remove('active');
+        });
+    }
+
+    // Add click event listeners to each dropdown
+    dropdowns.forEach(dropdown => {
+        const button = dropdown.querySelector('.dropdown-button');
+        const content = dropdown.querySelector('.dropdown-content');
+
+        // Toggle dropdown when the button is clicked
+        button.addEventListener('click', (e) => {
+            e.stopPropagation(); // Prevent the click from propagating to the document
+            closeAllDropdowns(); // Close other dropdowns
+            dropdown.classList.toggle('active'); // Toggle the current dropdown
+        });
+
+        // Handle option selection
+        content.addEventListener('click', (e) => {
+            if (e.target.tagName === 'DIV') {
+                button.textContent = e.target.textContent + ' ▼'; // Update button text
+                dropdown.classList.remove('active'); // Close the dropdown
+            }
+        });
+    });
+
+    // Close dropdowns when clicking outside
+    document.addEventListener('click', () => {
+        closeAllDropdowns();
+    });
+</script>
+
+</html>

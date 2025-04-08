@@ -174,23 +174,20 @@ nav ul li a {
 .sec-2-items {
     max-width: 250px;
 }
-
-
-
 .sec-2 h3 {
     font-size: 16px;
     line-height: 1.5;
 }
 
 .sec-2-icons {
-    width: 80px;  /* Adjust size */
-    height: 80px; /* Adjust size */
-    background-color: #e0e0e0; /* Light gray background */
-    border-radius: 50%; /* Makes it a circle */
+    width: 80px;  
+    height: 80px; 
+    background-color: #e0e0e0; 
+    border-radius: 50%; 
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 auto 15px auto; /* Centers the circle */
+    margin: 0 auto 15px auto; 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     color: #ff8c00; 
 }

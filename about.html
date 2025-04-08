@@ -1,4 +1,4 @@
-<doctype! html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -10,31 +10,30 @@
 
 </head>
 <body>
+    <!-- start header -->
     <header>
-        
-        <div class="nav-container">
-        <div class="logo">FarmFoodHub</div>
-
+        <div class="logo">
+            <img src="/img/logo.png" alt="FarmFoodHub Logo" />
+        </div>
         <nav>
-             <img src="/img/logo.png" alt=""`/>
-    
-            <ul class="nav-links">
-            <li><a href="about.html">Home</a></li>
-            <li><a href="about.html">About us</a></li>
-            <li><a href="about.html">shop</a></li>
-            <li><a href="about.html">Services</a></li>
-            <li><a href="about.html">Partners</a></li>
-            <li><a href="about.html">Contact</a></li>
-        </ul>
-    <div class="nav-buttons">
-        <button class="login">Login</button>
-        <button class="signup">Sign Up</button>
-        <i class="fas fa-shopping-cart"></i>
-    </div>
-            
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="partners.html">Partners</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
         </nav>
-      
+        <div class="nav-buttons">
+            <a href="login.html" class="login">Login</a>
+            <a href="signup.html" class="signup">Sign Up</a>
+        </div>
     </header>
+    <!-- end header -->
+
+
+
     <main>
         <section class="hero">
             <div class="hero-text">
@@ -69,36 +68,120 @@
 <section class="sec-2">
 <h2>How It Works</h2>
 <div class="sec-2-container">
-<div class="sec-2-items">
-    <i class="fas fa-tractor sec-2-icons"></i>
- <h3>Farmers List Produce</h3>
-    <p>Local farmers list their fresh produce on our platform.</p>
-</div>
     <div class="sec-2-items">
-        <i class="fas fa-shopping-cart sec-2-icons"></i>
+        <div class="sec-2-icons">
+            <i class="fas fa-tractor"></i>
+        </div>
+    <h3>Farmers List Produce</h3>
+        <p>Local farmers list their fresh produce on our platform.</p>
+    </div>
+    <div class="sec-2-items">
+        <div class="sec-2-icons">
+            <i class="fas fa-shopping-cart"></i>
+        </div>
  <h3>Consumers Purchase</h3>
         <p>Customers buy directly from local farmers.</p>
     </div>
     <div class="sec-2-items">
-        <i class="fas fa-hand-holding-heart sec-2-icons"></i>
+        <div class="sec-2-icons">
+            <i class="fas fa-hand-holding-heart "></i>
+        </div>
          <h3>Food Banks Distribute</h3>
         <p>Excess produce goes to local food banks.</p>
-        <
+    </div>
 </div>
-</div>
+<button class="explore">Explore the Platform</button>
 </section>
 
 <section class="partners">
     <h2>Our Partners</h2>
 
     <div class="partners-container">
-        <div class="partner-card">Local Co-op</div>
-        <div class="partner-card">Green Future</div>
-        <div class="partner-card">Community Fund</div>
-        <div class="partner-card">Fresh Delivery</div>
+        <div class="partner-card">
+            <i class="fas fa-calculator calculator-icon"></i>
+            <h4>Local Co-op</h4>
+        </div>
+
+        <div class="partner-card">
+            <i class="fas fa-leaf leaf-icon"></i>
+            <h4>Green Future</h4>
+        </div>
+
+        <div class="partner-card">
+            <i class="fas fa-heart heart-icon"></i>
+            <h4>Community Fund</h4>
+        </div>
+
+        <div class="partner-card">
+            <i class="fas fa-truck truck-icon"></i>
+            <h4>Fresh Delivery</h4>
+        </div>
+        
+    </div>
+</section>
+
+<!-- Join Our Community -->
+<section class="join-community">
+    <h2>Join Our Community</h2>
+    <p>Be part of the sustainable food revolution. Connect with local farmers, access fresh produce, and support food banks</p>
+    <div class="btns">
+        <button class="join-button">Sign Up Now</button>
+        <a href="contact.html" class="contact-us">Contact Us</a>
+    </div>
+    <div class="social-icons">
+         <i class="fab fa-facebook"></i>
+    <i class="fab fa-twitter"></i>
+    <i class="fab fa-instagram"></i>
+    <i class="fab fa-linkedin"></i>
     </div>
 </section>
 
 </main>
+
+<!-- Footer -->
+<footer>
+    <div class="first-row">
+        <img src="/img/logo.png" alt="logo"/>
+        <p>Connecting farmers, consumers, and food banks for a sustainable future
+        </p>
+        <div class="social-icons-footer">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-twitter twitter"></i>
+            <i class="fab fa-instagram instagram"></i>
+            <i class="fab fa-linkedin"></i>
+        </div>
+    </div>
+
+    <div class="second-row">
+        <h3>Quick Links</h3>
+        <p>Home</p>
+        <p>About Us</p>
+        <p>Shop</p>
+        
+    </div>
+
+    <div class="third-row">
+        <h3>Your Role</h3>
+        <p>Farmer</p>
+        <p>Consumer</p>
+        <p>Food Bank</p>
+        <p>Donor</p>
+    </div>
+
+    <div class="fourth-row">
+        <h3>Support</h3>
+        <p>FAQs</p>
+        <p>Privacy Policy</p>
+        <p>Terms of Service</p>
+        <p>Contact Us</p>
+        <!-- <p>Stay updated with our latest news and stories</p>
+        <input type="email" placeholder="Enter your email" />
+        <button class="btn-subscribe">Subscribe</button> -->
+    </div>
+</footer>
+<hr>
+<div class="footer-bottom">
+    <p>&copy; 2025 FarmFoodHub. All rights reserved.</p>
+</div>
 </body>
 </html>

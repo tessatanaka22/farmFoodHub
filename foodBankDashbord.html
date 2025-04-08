@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./foodBankDashbord.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <aside class="sidebar">
+        <h2>Food Bank Hub</h2>
+        <nav>
+          <ul>
+            <li class="active">Dashboard</li>
+            <li>Profile</li>
+            <li>Inventory</li>
+            <li>Orders</li>
+            <li>Reports</li>
+            <li>Settings</li>
+          </ul>
+        </nav>
+        <button class="logout">Log Out</button>
+      </aside>
+
+      <main class="main-content">
+        <section class="summary">
+          <h3>Downtown Food Bank</h3>
+          <p>123 Main Street, City, State</p>
+          <div class="stats">
+            <div>Total Donations</div>
+            <div>Active Orders</div>
+            <div>Peple Served</div>
+          </div>
+        </section>
+        <section class="orders">
+          <h4>Recent Orders</h4>
+          <table>
+            <tr>
+              <th>Order Id</th>
+              <th>Date</th>
+              <th>Status</th>
+              <th>Items</th>
+              <th>
+                Actions
+                <tr>
+                  <td>#12345</td>
+                  <td>Jan 15, 205</td>
+                  <td>Pending</td>
+                  <td>15 Items</td>
+                  <td>...</td>
+                </tr>
+              </th>
+            </tr>
+          </table>
+        </section>
+        <section class="inventory-request">
+          <div class="inventory chart">
+            <h4>Inventory Needs</h4>
+            pie chart goes here
+          </div>
+          <div class="request-form">
+            <h4>Request Surplus Produce</h4>
+            <label for="">Item Type</label>
+            <select>
+              <option>Fresh Vegitables</option>
+            </select>
+            <label for="">Quantity Needed</label>
+            <input type="number" />
+            <label for=""
+              ><input type="checkbox" />Mark as urgent request</label
+            >
+            <button>Submit Request</button>
+          </div>
+        </section>
+
+        <section class="impact">
+          <h4>Impact Overview</h4>
+          <div class="impact-stats">
+            <div>Meals Served</div>
+            <div>Families Helped</div>
+            <div>Total Weight</div>
+            <div>Efficiency Rate</div>
+            bar chart goes here
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

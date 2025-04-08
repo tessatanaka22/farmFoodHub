@@ -175,23 +175,29 @@ nav ul li a:hover {
 .sec-2-items {
     max-width: 250px;
 }
-
-
-
 .sec-2 h3 {
     font-size: 16px;
     line-height: 1.5;
 }
 
 .sec-2-icons {
+<<<<<<< HEAD
+    width: 80px;  
+    height: 80px; 
+=======
     width: 100px;
     height: 100px; 
+>>>>>>> e8fb81d5ec859d055f3330c6f656c625f16a8c38
     background-color: #e0e0e0; 
     border-radius: 50%; 
     display: flex;
     justify-content: center;
     align-items: center;
+<<<<<<< HEAD
+    margin: 0 auto 15px auto; 
+=======
     margin: 0 auto; 
+>>>>>>> e8fb81d5ec859d055f3330c6f656c625f16a8c38
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     color: #ff8c00; 
     margin-bottom: 20px;

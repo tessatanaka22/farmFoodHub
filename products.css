@@ -280,10 +280,12 @@ nav ul li a:hover {
         }
     
         .image-grid img {
-            width: 100%;
-            height: auto;
+            width: 150px;
+            height: 100px;
+
             border-radius: 5px;
             object-fit: cover;
+            cursor: pointer;
         }
     
         /* Responsive design */
@@ -305,6 +307,7 @@ footer {
     display: flex;
     justify-content: space-around;
     margin-bottom: 50px;
+    margin-top: 50px;
 }
 
 .first-row {

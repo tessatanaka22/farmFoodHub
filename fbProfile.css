@@ -43,9 +43,36 @@ body {
   flex-grow: 1;
   padding: 20px;
 }
+.top {
+  display: flex;
+}
 .summary {
   background: white;
   padding: 20px;
   margin-bottom: 20px;
   border-radius: 8px;
+  display: flex;
+  gap: 50px;
+}
+.about {
+  padding: 30px;
+}
+.about p {
+  padding: 20px;
+}
+.operations {
+  padding-bottom: 30px;
+}
+.operating-hrs {
+  display: flex;
+  gap: 100px;
+  padding: 30px;
+  margin: 20px;
+}
+.sun {
+  padding: 30px;
+  margin: 20px;
+}
+.service {
+  background-color: #ffefdb;
 }

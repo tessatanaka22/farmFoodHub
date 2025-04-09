@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>no color Page</title>
+    <link rel="stylesheet" href="donation.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c6de6d7637.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <nav>
+
+            <span><div class="logo"><img src="./img/trans.png" alt=""></div>
+        <h4 class="farm">FarmFoodHub</h4></span>
+        <i class="fa-solid fa-bars" id="menu-toggle"></i>
+        <ul class="head" id="nav-menu">
+                  <li><a href="" class="list">Home </a></li>
+      <li><a href="" class="list">About</a></li>
+      <li><a href="" class="list">Donate</a></li>
+      <li><a href="" class="list">Contact</a></li>
+        </ul>
+        <i class="fa-solid fa-xmark" id="close-menu"></i>
+            </nav>
+    </header>
+
+    <div class="make-div">
+        <h1 class="make">Make A Donation</h1>
+        <p class="make-note">Your Generosity Helps Us Fight Hunger and Support Local Farmers </p>
+    </div>
+
+    <div class="shadow-box">
+       <div class="choose"><h1>Choose Donation Types</h1></div> 
+<div class="combine-box">
+       <div class="col-div">
+       <!-- <div class="logo2"><img src="" alt=""></div>  -->
+       <i class="fa-solid fa-carrot carrot"></i>
+       <h5>Farm Produce</h5>
+       <p>Donate Farm Produce</p>
+     </div>
+       <div class="col-div">
+        <!-- <div class="logo2"><img src="" alt=""></div>  -->
+        <i class="fa-solid fa-truck truck"></i>
+
+        <h5>Logistics Support</h5>
+        <p>Help with transportation</p>
+ 
+         </div>
+        </div>
+        
+    <div class="select-div">
+        <h5 class="select">Select a Food Bank</h5>
+            <select
+                class="select-list"
+                name="gender"
+                id="food-list"
+            >
+                <option selected>Choose a food bank near you</option>
+                <option value="nigeria">Nigeria</option>
+                <option value="Ghana">Ghana</option>
+                <option value="cameroon">Cameroon</option>
+            </select>
+        </div>
+<!-- hr -->
+        <div class="select2">
+            <h5 class="specify">Specify Quantity or Amount</h5>
+            <div class="combine-div">
+            <div class="row-div">
+<h5 class="select-note">Quantity/Amount</h5>
+<input type="number" placeholder="enter quantity or amount" class="input" required>
+            </div>
+
+            <div class="row-div">
+                <h5 class="select-note">Unit/Currency</h5>
+                    <select
+                        class="select-listt"
+                        name="gender"
+                        id="unit-list"
+                    >
+                        <option selected>kilogram(kg)</option>
+                        <option value="2">2kg</option>
+                        <option value="5">5kg</option>
+                        <option value="10">10kg</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+  
+        <div class="delivery">
+                <h5 class="delivery">Choose Delivery/pickup Method</h5>
+                <label for="yes"><input  type="radio" name="account-type" value="deliver"  class="inline" checked  required/>I'll deliver to the food bank</label>
+                <label for="no"><input  type="radio" name="account-type" value="pick" class="inline" required />Schedule a pick up</label>
+            
+        </div>
+
+        <div class="donate"><button id="button">Complete Donation</button></div>
+        </div>
+        
+<footer>
+    <div class="first">
+        
+        <div class="row">
+        <div class="logo4"><img src="./img/trans.png" alt=""></div>
+<h2 class="head2 new">FarmFoodHub</h2>
+ </div>
+
+    <p class="first-note">Connecting farmers, consumers and food bank for a sustainable future.</p>
+    <div class="icon">
+        <a href=""><i class="fa-brands fa-facebook"></i></a>
+       <a href=""> <i class="fa-brands fa-twitter"></i></a>
+        <a href=""><i class="fa-brands fa-instagram"></i></a>
+        <a href=""> <i class="fa-brands fa-linkedin"></i></a>
+    </div>
+</div>
+     
+    <div class="second">
+        <h2 class="head2">Quick Link</h2>
+        <ul class="ul">
+            <li class="ul-list"><a href="">Home</a></li>
+            <li class="ul-list"><a href="">About Us</a></li>
+            <li class="ul-list"><a href="">Shop</a></li>
+        </ul>
+    </div>
+    
+    <div class="third">
+        <h2 class="head2">Your Role</h2>
+        <ul>
+            <li class="ul-list">Farmer</li>
+            <li class="ul-list">Consumer</li>
+            <li class="ul-list">Food bank</li>
+            <li class="ul-list">Donor</li>
+        </ul>
+
+    </div>
+    <div class="forth">
+        <h2 class="head2">Support</h2>
+        <ul>
+            <li class="ul-list"><a href="">FAQs</a></li>
+            <li class="ul-list"><a href="">Privacy Policy</a></li>
+            <li class="ul-list"><a href="">Terms of Service</a></li>
+            <li class="ul-list"><a href="">Contact Us</a></li>
+        </ul>
+    </div>
+
+</footer>
+<hr>
+<div class="last">
+    <i class="fa-solid fa-copyright"></i>
+    <p>2025 FarmFoodHub. All right reserved</p>
+</div>
+
+    <script src="donation.js"></script>
+</body>
+</html>

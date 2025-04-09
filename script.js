@@ -33,4 +33,4 @@ document.addEventListener('DOMContentLoaded',function(){
           e.preventDefault();
           alert('Thank you for your interest in purchasing discounted produce! This feature would add the item to your cart.');
         });
-});
+    });

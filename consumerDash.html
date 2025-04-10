@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Consumer Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome CDN -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+  </head>
+  <body>
+    <nav class="flex items-center justify-between p-4 bg-green-700 text-white p">
+      <div><img src="./img/logo.png" alt="" class="" /></div>
+      <!--<div class="text-xl font-bold">FarmFood Hub</div>-->
+      <!-- Search Bar -->
+      <form class="flex items-center w-80">
+        <input
+          type="text"
+          placeholder="Search, products, farmers..."
+          class="px-3 py-1 text-black rounded-l-md focus:outline-none"
+        />
+        <button
+          type="submit"
+          class="bg-orange-500 hover:bg-orange-600 px-3 py-1 rounded-r-md"
+        >
+          🔍
+        </button>
+      </form>
+    </nav>
+        <div class="container mt-4 flex gap-5 ">
+      <aside class="sidebar bg-green-700 rounded">
+        <h2>Food Bank Hub</h2>
+        <nav>
+          <ul>
+            <li class="active"><a href="#">Dashboard</a></li>
+            <li><a href="./fbProfile.html">Orders & Deliveries</a></li>
+            <li><a href="./inventory.html">Saved Items</a></li>
+            <li><a href="./orders.html">Messages</a></li>
+            <li><a href="./reports.html">Wallet and Payments</a></li>
+            <li><a href="./settings.html">Settings</a></li>
+          </ul>
+        </nav>
+        <button class="logout">Log Out</button>
+      </aside>
+
+      <main class="main-content w-3/4 ">
+        <section class="bg-green-700 mr-5 rounded">
+        <h3 class="text-white p-30 mb-8 ml-3">Browse Categories</h3>
+        <div class="flex  gap-8 justify-around "  >
+        <div><button class="bg-white border-2 border-white rounded-md p-5 mb-3"><i class="fas fa-cow text-orange-500"></i>Livestock</button></div>
+        <div><button class="bg-white border-2 border-white rounded-md p-5">Poultry</button></div>
+        <div><button class="bg-white border-2 border-white rounded-md p-5">Grains</button></div>
+        <div><button class="bg-white border-2 border-white rounded-md p-5">Vegetables</button></div>
+        <div><button class="bg-white border-2 border-white rounded-md p-5">Fruits</button></div>
+        <div><button class="bg-white border-2 border-white rounded-md p-5">Dairy</button></div>
+        </div>
+
+        </section>
+        <section>
+          <h3>Recent Orders</h3>
+          <div><h4>Order #12345</h4>
+            <p>In Transit *Arriving Tomorrow</p>
+          </div>
+          <div><h4>Order #12344</h4>
+            <p>Deliverd *Jan 15, 2025</p>
+          </div>
+        </section>
+        <section>
+          <h3>Recent Messages</h3>
+        </section>
+  </body>
+</html>

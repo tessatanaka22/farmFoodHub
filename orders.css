@@ -55,6 +55,10 @@ body {
   border-radius: 5px;
   color: gray;
 }
+.tracking-buttons button:active {
+  background-color: orange;
+  color: white;
+}
 .veg-order {
   margin: 30px;
   border: 2px solid white;

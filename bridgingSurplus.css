@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.6;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #ffffff;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .auth-buttons button {
+    margin-left: 10px;
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .login {
+    background-color: #fff;
+    border: 1px solid #ccc;
+  }
+  
+  .signup {
+    background-color: #2e7d32;
+    color: white;
+  }
+  
+  .hero {
+    background: url('./563e7809a88426653e6871f91827462e.jpeg') center/cover no-repeat;
+    color: white;
+    padding: 4rem 2rem;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    height: 400px;
+    background-blend-mode: overlay;
+    background-color: rgba(2, 46, 2, 0.973);
+    
+    
+  }
+  
+  .hero-text {
+    max-width: 600px;
+    
+  }
+  
+  .cta-button {
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background-color: white;
+    color: #2e7d32;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .how-it-works,
+  .impact,
+  .needs,
+  .join-us {
+    padding: 3rem 2rem;
+    text-align: center;
+  }
+  
+  .steps,
+  .impact-stats,
+  .needs-list {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .step,
+  .impact-stats div,
+  .needs-list div {
+    padding: 1rem;
+    background-color: #f3f3f3;
+    border-radius: 8px;
+    min-width: 150px;
+  }
+  
+  .impact {
+    background-color: #fff3e0;
+  }
+  
+  .donate-button,
+  .become-partner {
+    margin-top: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .join-us {
+    background-color: #2e7d32;
+    color: white;
+  }
+  
+  footer {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 50px;
+}
+
+.first-row {
+    max-width: 230px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.social-icons-footer {
+    display: flex;
+    gap: 16px;
+    cursor: pointer;
+}
+
+.second-row {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.second-row h3 {
+    margin-bottom: 20px;
+}
+
+.second-row p {
+    cursor: pointer;
+}
+
+.third-row {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.third-row h3 {
+    margin-bottom: 20px;
+}
+
+.third-row p {
+    cursor: pointer;
+}
+
+.fourth-row {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-right: 90px;
+}
+
+.fourth-row h3 {
+    margin-bottom: 20px;
+}
+
+.fourth-row p {
+    max-width: 230px;
+}
+
+.fourth-row input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.p2025{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}

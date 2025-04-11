@@ -1,0 +1,78 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  background: #f5f5f5;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  min-height: 100vh;
+}
+.sidebar {
+  width: 220px;
+  background: #e5f3e0;
+  padding: 20px;
+  height: 100vh;
+}
+.sidebar h2 {
+  margin-bottom: 20px;
+}
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar li {
+  margin: 10px 0;
+  cursor: pointer;
+}
+.sidebar li .active {
+  font-weight: bold;
+}
+.logout {
+  margin-top: 20px;
+  padding: 8px;
+  width: 100px;
+}
+.main-content {
+  flex-grow: 1;
+  padding: 20px;
+}
+.top {
+  display: flex;
+}
+.summary {
+  background: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  display: flex;
+  gap: 50px;
+}
+.about {
+  padding: 30px;
+}
+.about p {
+  padding: 20px;
+}
+.operations {
+  padding-bottom: 30px;
+}
+.operating-hrs {
+  display: flex;
+  gap: 100px;
+  padding: 30px;
+  margin: 20px;
+}
+.sun {
+  padding: 30px;
+  margin: 20px;
+}
+.service {
+  background-color: #ffefdb;
+}

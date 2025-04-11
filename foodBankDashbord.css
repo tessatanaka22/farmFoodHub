@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  background: #f5f5f5;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  min-height: 100vh;
+}
+.sidebar {
+  width: 220px;
+  background: #e5f3e0;
+  padding: 20px;
+  height: 100vh;
+}
+.sidebar h2 {
+  margin-bottom: 20px;
+}
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar li {
+  margin: 10px 0;
+  cursor: pointer;
+}
+.sidebar li .active {
+  font-weight: bold;
+}
+.logout {
+  margin-top: 20px;
+  padding: 8px;
+  width: 100px;
+}
+.main-content {
+  flex-grow: 1;
+  padding: 20px;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+/*.summary {
+  background: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}*/
+.stats,
+.impact-stats {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  gap: 15px;
+}
+.summary,
+.orders,
+.inventory-request,
+.impact {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+.inventory-request {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.inventory-chart,
+.request-form {
+  flex: 1 1 45%;
+}
+.request-form input,
+.request-form select {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 8px;
+}
+.request-form button {
+  background: green;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+/*.impact-stats {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}*/
+
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+  }
+  .inventory-request {
+    flex-direction: column;
+  }
+
+  .inventory-chart,
+  .request-form {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .stats,
+  .impact-stats {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  table,
+  th,
+  td {
+    font-size: 14px;
+  }
+
+  .main-content {
+    padding: 10px;
+  }
+  .sidebar {
+    padding: 10px;
+  }
+}

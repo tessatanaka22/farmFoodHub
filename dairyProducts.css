@@ -1,0 +1,336 @@
+/* General styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* header */
+.header{
+    background-color: #4CAF50;
+    padding: 5px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-;
+}
+
+.search {
+    display: flex;
+        align-items: center;
+        gap: 10px;
+        margin: 0 60px;
+}
+
+.search-input {
+    padding: 10px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    width: 930px;
+    outline: none;
+}
+
+.search-icon {
+    margin-left: -50px;
+    font-size: 16px;
+    color: #aaa;
+    cursor: pointer;
+}
+
+.cart {
+    margin-left: -40px;
+    font-size: 20px;
+    color: #4CAF50;
+    cursor: pointer;
+}
+
+
+
+/* hero section */
+.hero-section {
+    background-image: url(img/milk2.jpg);
+    background-position: no-repeat;
+    background-size:cover;
+    height: 400px;
+    margin-top: 30px;
+    margin-bottom: 0;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.hero-section h1 {
+    margin-bottom: 24px;
+    font-size: 40px;
+    font-weight: 700;
+
+}
+
+.hero-section p {
+    font-size: 20px;
+    max-width: 600px;
+   
+}
+
+/* products section */
+        /* Products section container */
+        .products-section {
+            display: flex;
+            flex-wrap: wrap;
+            row-gap: 40px;
+            column-gap: 20px;
+            padding: 70px 140px;
+            justify-content: space-between;
+        }
+    
+        /* Individual product card */
+        .product {
+            background-color: #f3f2f2;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 15px;
+            width: calc(39% - 90px);
+            /* Three cards per row with spacing */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .product:hover{
+            background-color: rgb(231, 255, 231);
+        }
+    
+        /* Product image */
+        .product-img {
+            width: 100%;
+            height: 190px;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+    
+        .product h2 {
+            text-align: left;
+            margin-top: 10px;
+            font-weight: normal;
+        }
+
+        /* Farmer info */
+        .farmer-info {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin: 10px 0;
+        }
+    
+        /* Farmer logo */
+        .farmer-info img {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+    
+        /* Price and stock info */
+        .price-rating {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 10px 0;
+        }
+    
+        /* Price */
+        .price {
+            font-weight: normal;
+            font-size: 20px;
+            color: #333;
+        }
+    
+        /* Rating */
+        .rating {
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            gap: 5px;
+            margin: 10px 0;
+        }
+    
+        /* Star icon */
+        .rating i {
+            color: #999696;
+        }
+    
+        /* Buttons */
+        .btns {
+            display: flex;
+            gap: 10px;
+            margin-top: 16px;
+        }
+    
+        .btn-add,
+        .btn-details {
+            padding: 10px 34px;
+            font-size: 14px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+    
+        .btn-add {
+            background-color: #4CAF50;
+            color: white;
+        }
+    
+        .btn-add:hover {
+            background-color: #218838;
+        }
+    
+        .btn-details {
+            background-color: transparent;
+            color: black;
+            border: 1px solid #4CAF50;
+        }
+    
+        .btn-details:hover {
+            background-color: white;
+        }
+    
+        /* Responsive design */
+        @media (max-width: 1200px) {
+            .product {
+                width: calc(50% - 20px);
+            }
+        }
+    
+        @media (max-width: 768px) {
+            .product {
+                width: 100%;
+            }
+        }
+
+
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.first-row {
+    max-width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.first-row img {
+    width: 200px;
+}
+
+.social-icons-footer {
+    display: flex;
+    gap: 16px;
+    cursor: pointer;
+    color: blue;
+}
+
+.twitter {
+    color: #1DA1F2;
+}
+
+.instagram {
+    color: rgb(223, 24, 223);
+}
+
+
+.second-row {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 30px;
+}
+
+.second-row h3 {
+    margin-bottom: 20px;
+}
+
+.second-row p {
+    cursor: pointer;
+}
+
+.third-row {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 30px;
+}
+
+.third-row h3 {
+    margin-bottom: 20px;
+}
+
+.third-row p {
+    cursor: pointer;
+}
+
+.fourth-row {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 30px;
+    margin-right: 90px;
+}
+
+.fourth-row h3 {
+    margin-bottom: 20px;
+}
+
+.fourth-row p {
+    max-width: 230px;
+}
+
+.fourth-row input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.btn-subscribe {
+    position: relative;
+    top: -56px;
+    bottom: 400px;
+    right: -240px;
+    font-size: 14px;
+    background-color: black;
+    color: white;
+    padding: 12px 10px !important;
+    border-radius: 5px;
+    width: 100px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+hr {
+    margin: 0 auto;
+    width: 1200px;
+    text-align: center;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+/* end of footer */

@@ -28,20 +28,15 @@ body {
     gap: 10px;
     font-weight: bold;
     font-size: 18px;
+    margin: 50px;
 }
 
-.logo img {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: #ffcc33;
-    padding: 5px;
-}
 
 .header-right {
     display: flex;
     align-items: center;
     gap: 15px;
+    padding: 30px;
 }
 
 .notification-icon {

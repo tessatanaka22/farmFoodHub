@@ -33,13 +33,6 @@ body {
     font-size: 18px;
 }
 
-.logo img {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    padding: 5px;
-}
-
 .header-right {
     display: flex;
     align-items: center;

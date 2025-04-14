@@ -27,16 +27,6 @@ body {
     font-weight: bold;
 }
 
-.logo-circle {
-    width: 36px;
-    height: 36px;
-    background-color: #FFA500;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .user-info {
     display: flex;
     align-items: center;

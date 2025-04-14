@@ -1,0 +1,287 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f7f7f7;
+}
+
+.header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.logo-circle {
+    width: 36px;
+    height: 36px;
+    background-color: #FFA500;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-avatar {
+    width: 32px;
+    height: 32px;
+    background-color: #ccc;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container {
+    display: flex;
+    min-height: calc(100vh - 60px);
+}
+
+.sidebar {
+    width: 200px;
+    background-color: white;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.menu-items {
+    background-color: #4CAF50;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.menu-item {
+    color: white;
+    padding: 10px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+}
+
+.menu-item.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #FF9800;
+}
+
+.white-space {
+    flex: 1;
+    background-color: white;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+.welcome-header {
+    margin-bottom: 20px;
+}
+
+.welcome-header h2 {
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+}
+
+.welcome-header p {
+    color: #777;
+    font-size: 0.9rem;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.dashboard-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    color: #333;
+    font-weight: 500;
+}
+
+.card-value {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.card-trend {
+    color: #4CAF50;
+    font-size: 0.8rem;
+}
+
+.orders-card .card-value {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.pending-tag {
+    font-size: 0.8rem;
+    color: #777;
+}
+
+.insights-card {
+    padding: 0;
+}
+
+.insight-item {
+    padding: 15px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.insight-item:last-child {
+    border-bottom: none;
+}
+
+.insight-icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 24px;
+    margin-right: 8px;
+}
+
+.orange-bg {
+    background-color: #FFE0B2;
+    color: #FF9800;
+}
+
+.green-bg {
+    background-color: #E8F5E9;
+    color: #4CAF50;
+}
+
+.insight-title {
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.insight-desc {
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.messages-section, .orders-section {
+    background-color: white;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+}
+
+.section-title {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.message-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.message-prof {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #E0E0E0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.message-content h4 {
+    font-size: 0.9rem;
+    margin-bottom: 3px;
+}
+
+.message-content p {
+    font-size: 0.8rem;
+    color: #777;
+}
+
+.order-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f0f8f0;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.order-info h4 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 5px;
+}
+
+.order-details {
+    font-size: 0.8rem;
+    color: #777;
+}
+
+.order-price {
+    font-weight: bold;
+    color: #333;
+}
+
+.product-icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    line-height: 24px;
+    border-radius: 4px;
+}
+
+.carrot-icon {
+    background-color: #FFECB3;
+    color: #FF9800;
+}
+
+.apple-icon {
+    background-color: #FFCDD2;
+    color: #F44336;
+}

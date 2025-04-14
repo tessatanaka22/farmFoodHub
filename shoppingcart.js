@@ -1,56 +1,10 @@
-// document.addEventListener("DOMContentLoaded", function () {
-//     const cartIcon = document.getElementById("top");
-//     const subTotal = document.querySelector(".rowww");
-
-//     let cartCount = 0;
-
-//     const items = document.querySelectorAll(".item");
-
-//     items.forEach(function (item) {
-//         const minus = item.querySelector(".minus");
-//         const added = item.querySelector(".plus");
-//         const counting = item.querySelector(".result");
-//         const note = item.querySelector(".tag");
-        
-//         const itemPrice = parseFloat(item.getAttribute("data-price"));
-//         let count = 0;
-
-//         added.addEventListener("click", function () {
-//             count += 1;
-//             cartCount += 1;
-
-//             counting.textContent = count;
-//             cartIcon.textContent = cartCount;
-//             note.textContent = "$" + (count * itemPrice);
-//             subTotal.textContent =  note.textContent
-
-//         });
-
-//         minus.addEventListener("click", function () {
-//             if (count > 0) {
-//                 count -= 1;
-//                 cartCount -= 1;
-
-//                 counting.textContent = count;
-//                 cartIcon.textContent = cartCount;
-
-//                 note.textContent = "$" + (count * itemPrice);
-//                 subTotal.textContent =  note.textContent
-
-//             }
-//         });
-//     });
-// });
-
-
-
 document.addEventListener("DOMContentLoaded", function () {
     const cartIcon = document.getElementById("top");
     const subTotal = document.querySelector(".rowww");
     const Total = document.getElementById("total");
     const reset = document.querySelector(".delete")
-
-    let cartCount = 0;
+    const submit = document.querySelector(".complete-butt")  
+      let cartCount = 0;
     let subTotalAmount = 0;
 
     const items = document.querySelectorAll(".item");
@@ -89,24 +43,20 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     });
-});
-
-
-
-
-// buttonEl.addEventListener("click", function(){
+    submit.addEventListener("click", function(){
+        alert("Order Submitted!");
     
-//     if( count > 0){
-//         message = "added"
-//         note.textContent = message
-         
-//          cartTotal += count
-//      cart.textContent = cartTotal
+        // Calculate subtotal and total
+        const sub = "$" + subTotalAmount.toFixed(2);
+        const tot = "$" + (subTotalAmount + 6).toFixed(2);
     
-//       count = 0
-//     counting.textContent = 0
-//     }
-//     setTimeout(() => {
-//             note.textContent = ""
-//         }, 1000)
-//     })
+        // Log the results
+        console.log("Subtotal: " + sub);
+        console.log("Total: " + tot);
+    
+        // Optional: You can do something with the data here (e.g., sending it to a server)
+    });});
+
+
+
+

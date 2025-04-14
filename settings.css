@@ -1,0 +1,223 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+body{
+    background-color: #f5f5f5;
+    display: flex;
+    min-height: 100vh;
+}
+.sidebar{
+    width: 120px;
+    background-color: #E5E5E5;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #e0e0e0;
+}
+.logo{
+    color: #f8b156;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+.nav-item{
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #666;
+    font-size: 12px;
+    cursor: pointer;
+}
+.nav-item.active{
+     background-color: #e8f5e9;
+     color: #388e3c;
+     border-left: 3px solid #4caf50;
+}
+.nav-item i{
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+.main-content{
+    flex: 1;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.settings-header{
+    margin-bottom: 20px;
+    text-align: center;
+}
+.settings-header h1{
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 5px;
+}
+.settings-header p{
+    color: #666;
+    font-size: 14px;
+}
+.settings-section{
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+.settings-section h2{
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 15px;
+}
+.setting-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+.setting-item:last-child{
+    border-bottom: none;
+}
+.setting-info{
+   flex: 1;
+}
+.setting-info h3{
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 3px;
+    font-weight: normal;
+}
+.setting-info p{
+    font-size: 12px;
+    color:#888;
+}
+.toggle{
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+}
+.toggle input{
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.slider{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+.slider:before{
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 2px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+input:checked + .slider{
+    background-color: #4caf50;
+}
+input:checked + .slider:before{
+    transform: translateX(20px);
+}
+.dropdown{
+    padding: 8px 12px 8px 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+    margin-top: 5px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    background-image: url("data:image/svg+xml;utf8,<svg fill='gray' height='24' viewbox='0 0 24 24' width='24' xmlns='http:www.w3.org/2000/svg'>path d='M7 1015 5 5-5z' /><path d='M0 0h24v24H0z' fill='none'/>/svg> ");
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    background-size: 12px;
+}
+    .action-button{
+        padding: 6px 12px;
+        border-radius: 4px;
+        border: none;
+        cursor: pointer;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+    .action-button i{
+        font-size: 12px;
+    }
+    .enable-button{
+        background-color: #f0f0f0;
+        color: #333;
+    }
+    .export-button{
+        background-color: #f0f0f0;
+        color: #333;
+    }
+    .delete-button{
+        background-color: #f0f0f0;
+        color: #333;
+    }
+    .action-buttons{
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 20px;
+    }
+    .cancel-button{
+        background-color: #f5f5f5;
+        color: #333;
+        padding: 8px 16px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        margin-right: 10px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+    .save-button{
+        background-color: #f8b156;
+        color: white;
+        padding: 8px 16px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+    .logout{
+        position: absolute;
+        bottom: 20px;
+        left: 0;
+        width: 100%;
+        padding: 0 15px;
+    }
+    .logout-btn{
+        display: flex;
+        align-items: center;
+        padding: 12px 15px;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.2s;
+        font-size: 14px;
+        color: #f8b156;
+    }

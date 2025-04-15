@@ -22,7 +22,9 @@
             </ul>
         </div>
         <div class="logo-div2">
-          <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQo015yEVN_x0Rd27-rkRg5gAIbU1TI36VqCw&s" alt=""><span id="top" style="position: absolute; top: 5px; right: 120px;"></span><i class="fa-solid fa-cart-shopping icn"></i>
+          <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQo015yEVN_x0Rd27-rkRg5gAIbU1TI36VqCw&s" alt=""><span id="top" style="position: absolute; top: 5px; right: 120px;">
+
+          <span id="top" style="position: absolute; top: 2px; right: 5px;">0</span><i class="fa-solid fa-cart-shopping icn"></i>
         </div>
     </nav>
 <!-- <hr> -->
@@ -42,11 +44,13 @@
                 
                 <div class="name"><h5>Organic Tomatoes</h5>
                  <p>Jang Farm</p> 
-                 <div class="button-div"><button class="minus">-</button>
-                 <span class="result">2</span>
-                 <button class="plus">+</button></div></div></div>
+                 <div class="button-div item" data-price="4"><button class="minus">-</button>
+                 <span class="result">0</span>
+                 <button class="plus">+</button></div></div>
+                 <h6 class="tot" style="font-size: 20px"></h6></div>
+
                          <div class="total">
-                             <h6 class="tot" style="font-size: 20px">$14</h6>
+                             <!-- <h6 class="tot" style="font-size: 20px">$14</h6> -->
                              <i class="fa-solid fa-trash" style="color: orange"></i>
                  </div>
                  </div>
@@ -57,11 +61,13 @@
                     
                     <div class="name"><h5>Fresh Carrot</h5>
                      <p>Madam Agnes</p> 
-                     <div class="button-div"><button class="minus">-</button>
-                     <span class="result">1</span>
-                     <button class="plus">+</button></div></div></div>
+                     <div class="button-div item" data-price="1"><button class="minus">-</button>
+                     <span class="result">0</span>
+                     <button class="plus">+</button></div></div>
+                     <h6 class="tot" style="font-size: 20px"></h6></div>
+
                              <div class="total">
-                                 <h6 class="tot" style="font-size: 20px">$1</h6>
+                                 <!-- <h6 class="tot" style="font-size: 20px">$1</h6> -->
                                  <i class="fa-solid fa-trash" style="color: orange"></i>
                      </div>
                      </div>
@@ -71,11 +77,13 @@
                         
                         <div class="name"><h5>Organic Potatoes</h5>
                          <p>Jang Farm</p> 
-                         <div class="button-div"><button class="minus">-</button>
-                         <span class="result">3</span>
-                         <button class="plus">+</button></div></div></div>
+                         <div class="button-div item" data-price="5"><button class="minus">-</button>
+                         <span class="result">0</span>
+                         <button class="plus">+</button></div></div>
+                         <h6 class="tot" style="font-size: 20px"></h6></div>
+
                                  <div class="total">
-                                     <h6 class="tot" style="font-size: 20px">$15</h6>
+                                     <!-- <h6 class="tot" style="font-size: 20px">$15</h6> -->
                                      <i class="fa-solid fa-trash" style="color: orange"></i>
                          </div>
                          </div>
@@ -88,11 +96,13 @@
                             
                             <div class="name"><h5>Organic Spinach</h5>
                              <p>Jang Farm</p> 
-                             <div class="button-div"><button class="minus">-</button>
+                             <div class="button-div item" data-price="2"><button class="minus">-</button>
                              <span class="result">0</span>
-                             <button class="plus">+</button></div></div></div>
+                             <button class="plus">+</button></div></div>
+                             <h6 class="tot" style="font-size: 20px"></h6></div>
+
                                      <div class="total">
-                                         <h6 class="tot" style="font-size: 20px">$14</h6>
+                                         <!-- <h6 class="tot" style="font-size: 20px">$14</h6> -->
                                          <i class="fa-solid fa-trash" style="color: orange"></i>
                              </div>
                              </div>
@@ -103,10 +113,10 @@
 
         <div class="payment">
             <h3 class="order">Order Summary</h3>
-            <div class="roww"><h4>Subtotal</h4><p>$44</p></div>
+            <div class="roww"><h4>Subtotal</h4><p class="rowww">$0</p></div>
             <div class="roww"><h4>Estimated Tax</h4><p>$1</p></div>
             <div class="roww"><h4>Delivery Fee</h4><p>$5</p></div>
-             <div class="tottal"><h3>Total</h3><span>$50</span></div>
+             <div class="tottal"><h3>Total</h3><span id="total">$0</span></div>
 
              <div class="complete-butt"><button>Proceed to check out</button> <span class="sec"><i class="fa-solid fa-lock" style="font-size: 10px;"></i><p style="font-size: 10px; margin-left: 5px;">Secure check out powered by Flutterwave</p></span></div>
         </div>
@@ -167,6 +177,6 @@
         <p>2025 FarmFoodHub. All right reserved</p>
     </div>
     
-<!-- <script src="shoppingcart.js"></script> -->
+<script src="shoppingcart2.js"></script>
 </body>
 </html>

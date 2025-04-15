@@ -136,6 +136,9 @@ background: #fff;
 margin-inline: 10px;
 
 }
+.tot{
+    transform: translateX(350px);
+}
     .total{
     margin-top: 20px;
     

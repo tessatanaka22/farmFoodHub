@@ -1,3 +1,7 @@
+
+
+
+
 document.addEventListener("DOMContentLoaded", function () {
     const cartIcon = document.getElementById("top");
     const subTotal = document.querySelector(".rowww");

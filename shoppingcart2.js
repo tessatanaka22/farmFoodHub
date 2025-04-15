@@ -17,8 +17,8 @@ document.addEventListener("DOMContentLoaded", function () {
         const minus = item.querySelector(".minus");
         const added = item.querySelector(".plus");
         const counting = item.querySelector(".result");
-        const note = item.parentElement.querySelector(".tag");
-        const itemPrice = parseFloat(item.getAttribute("data-price"));
+        const note = item.querySelector(".tot");
+                const itemPrice = parseFloat(item.getAttribute("data-price"));
         let count = 0;
 
         added.addEventListener("click", function () {
@@ -47,17 +47,29 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     });
-    submit.addEventListener("click", function(){
+    submit.addEventListener("click", function () {
         alert("Order Submitted!");
-    
+
         const sub = "$" + subTotalAmount.toFixed(2);
         const tot = "$" + (subTotalAmount + 6).toFixed(2);
-    
+
         console.log("Subtotal: " + sub);
         console.log("Total: " + tot);
-    
-    });});
 
+        cartCount = 0;
+        subTotalAmount = 0;
 
+        items.forEach(function (item) {
+            const counting = item.querySelector(".result");
+            const note = item.querySelector(".tot");
+            counting.textContent = 0;
+            if (note) note.textContent = "$0.00";
+        });
+
+        cartIcon.textContent = cartCount;
+        subTotal.textContent = "$" + subTotalAmount.toFixed(2);
+        Total.textContent = "$0.00";
+        });
+});
 
 

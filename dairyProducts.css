@@ -49,7 +49,7 @@
 
 /* hero section */
 .hero-section {
-    background-image: url(img/milk2.jpg);
+    background-image: url(img/milk3.jpg);
     background-position: no-repeat;
     background-size:cover;
     height: 400px;
@@ -215,6 +215,23 @@
         }
 
 
+        /* Checkout */
+        .checkout {
+            background-color: #ebba81;
+            text-align: center;
+            padding: 60px;
+        }
+
+        .checkout a {
+            font-size: 18px;
+            background-color: #218838;
+            border-radius: 8px;
+            outline: none;
+            border: none;
+            padding: 10px 24px;
+            color: white;
+            text-decoration: none;
+        }
 
 /* Footer */
 footer {

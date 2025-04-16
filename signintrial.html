@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/c6de6d7637.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="header">
+      <div class="page">
+        <div class="start">
+          <div class="logo">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTi2e8KIbQ347zGi2HZkiQAKFs4QUOGjXOCtA&s"
+              alt="logo"
+            />
+          </div>
+          <h1 class="welcome">Welcome back</h1>
+          <p class="sign">Sign in to FarmHub Design</p>
+        </div>
+        <div class="shadow">
+          <form onsubmit="handleSignin(event)" id="signinForm">
+            <label for="name"> Email or Phone Number </label>
+            <input
+              type="text"
+              name="username"
+              id="name"
+              placeholder="please write your email"
+              class="input"
+            />
+
+            <label for="password"> Password</label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              class="input"
+              placeholder="enter your password"
+            />
+
+            <button class="sign-in" type="submit">Sign in</button>
+          </form>
+
+          <div class="login">
+            <span>
+              <input type="checkbox" class="box" />
+              <label for="">Remember me</label>
+            </span>
+
+            <a href=""><p>Forgot password?</p></a>
+          </div>
+          <div class="button">
+            <p>Don't have an account? <a href="">Sign up</a></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="second-page">
+        <div class="logo-page">
+          <div class="logo2">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTi2e8KIbQ347zGi2HZkiQAKFs4QUOGjXOCtA&s"
+              alt="logo"
+            />
+          </div>
+          <h4 class="stop">Your one-stop Agricultural Marketplace</h4>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="about">
+        <h1 class="about-us">About us</h1>
+        <p>Your trusted marketplace for farm products and livestock</p>
+      </div>
+      <div class="quick">
+        <h1>Quick Links</h1>
+        <ul>
+          <a href=""><li>Partners</li></a>
+          <a href=""><li>Services</li></a>
+          <a href=""><li>Shop</li></a>
+          <a href=""><li>About</li></a>
+          <a href=""><li>Home</li></a>
+        </ul>
+      </div>
+      <div class="contact">
+        <h1>Contact</h1>
+        <span><i class="fa-solid fa-phone"></i> +1 234 5678 65</span>
+        <a href="mailto:africaagility@gmail.com">
+          <i class="fa-solid fa-envelope"></i> africaagility@gmail.com
+        </a>
+      </div>
+      <div class="follow">
+        <h1>Follow Us</h1>
+        <div class="icon">
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-instagram"></i>
+        </div>
+      </div>
+    </footer>
+
+    <div class="last">
+      <i class="fa-regular fa-copyright"></i>
+      <p class="last-p">2025 FarmfoodPlc. All rights reserved</p>
+    </div>
+
+    <script src="app.js"></script>
+    <script>
+      /*document.addEventListener("DOMContentLoaded", function () {
+        const form = document.getElementById("signinForm");
+        form.addEventListener("submit", handleSignin);
+      });
+
+      function handleSignin(event) {
+        event.preventDefault();
+
+        const role = localStorage.getItem("userRole");
+        console.log("Role from storage:", role);
+
+        if (role === "farmer") {
+          window.location.href = "farmersDashboard.html";
+        } else if (role === "foodbank") {
+          window.location.href = "foodBankDashbord.html";
+        } else if (role === "consumer") {
+          window.location.href = "consumerDash.html";
+        } else {
+          alert("No Role Selected.");
+        }
+      }*/
+
+      
+  function handleSignin(event) {
+    event.preventDefault();
+
+    const username = document.getElementById("name").value.trim();
+    const password = document.getElementById("password").value.trim();
+
+    const user = JSON.parse(localStorage.getItem("user"));
+    const role = localStorage.getItem("SelectedRole");
+
+    if (!user) {
+      alert("No user found. Please sign up first.");
+      return;
+    }
+
+    if ((user.username === username || user.email === username) && user.password === password) {
+      if (role === "farmer") {
+        window.location.href = "./farmersDashboard.html";
+      } else if (role === "consumer") {
+        window.location.href = "./consumerDash.html";
+      } else if (role === "foodbank") {
+        window.location.href = "./foodBankDashbord.html";
+      } else {
+        alert("Role not selected or invalid.");
+      }
+    } else {
+      alert("Invalid credentials. Please check your username and password.");
+    }
+  }
+
+
+    </script>
+  </body>
+</html>

@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const cartIcon = document.getElementById("top");
+      const cartIcon = document.getElementById("top");
     const subTotal = document.querySelector(".rowww");
     const Total = document.getElementById("total");
     const reset = document.querySelector(".delete")
@@ -43,20 +43,29 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     });
-    submit.addEventListener("click", function(){
+    submit.addEventListener("click", function () {
         alert("Order Submitted!");
-    
-        // Calculate subtotal and total
+
         const sub = "$" + subTotalAmount.toFixed(2);
         const tot = "$" + (subTotalAmount + 6).toFixed(2);
-    
-        // Log the results
+
         console.log("Subtotal: " + sub);
         console.log("Total: " + tot);
-    
-        // Optional: You can do something with the data here (e.g., sending it to a server)
-    });});
 
+        cartCount = 0;
+        subTotalAmount = 0;
 
+        items.forEach(function (item) {
+            const counting = item.querySelector(".result");
+            const note = item.querySelector(".tot");
+            counting.textContent = 0;
+            if (note) note.textContent = "$0.00";
+        });
+
+        cartIcon.textContent = cartCount;
+        subTotal.textContent = "$" + subTotalAmount.toFixed(2);
+        Total.textContent = "$0.00";
+        });
+});
 
 

@@ -30,8 +30,11 @@
             Connect directly with consumers and food banks. Manage your product
             listings and deliveries efficiently.
           </div>
-          <button class="role-button farmers-button">
-            <a href="./create.html">Select Role</a>
+          <button
+            onclick="selectRole('farmer')"
+            class="role-button farmers-button"
+          >
+            Farmer
           </button>
         </div>
 
@@ -42,8 +45,11 @@
             Browse fresh produce directly from local farmers. Order and schedule
             deliveries to your doorstep.
           </div>
-          <button class="role-button consumers-button">
-            <a href="./create.html">Select Role</a>
+          <button
+            onclick="selectRole('consumer')"
+            class="role-button consumers-button"
+          >
+            Consumer
           </button>
         </div>
 
@@ -54,8 +60,11 @@
             Receive donations and manage inventory. Connect with farmers for
             bulk produce acquisition.
           </div>
-          <button class="role-button foodbanks-button">
-            <a href="./create.html">Select Role</a>
+          <button
+            onclick="selectRole('foodbank')"
+            class="role-button foodbanks-button"
+          >
+            Food Bank
           </button>
         </div>
       </div>
@@ -70,5 +79,12 @@
       </div>
       <footer>&copy; 2025 FarmFoodHub. All rights reserved.</footer>
     </div>
+    <script>
+      function selectRole(role) {
+        console.log("Selected role:", role);
+        localStorage.setItem("userRole", role);
+        window.location.href = "signuptrial.html";
+      }
+    </script>
   </body>
 </html>

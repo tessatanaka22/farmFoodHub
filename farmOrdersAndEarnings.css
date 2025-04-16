@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f7f7f7;
+}
+
+.header {
+  background-color: #4caf50;
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-avatar {
+  width: 32px;
+  height: 32px;
+  background-color: #ccc;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-container {
+  display: flex;
+  min-height: calc(100vh - 60px);
+}
+
+.sidebar {
+  width: 200px;
+  background-color: white;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-items {
+  background-color: #4caf50;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.menu-item {
+  color: white;
+  padding: 10px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.menu-item.active {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ff9800;
+}
+
+.white-space {
+  flex: 1;
+  background-color: white;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+}
+
+.welcome-header {
+  margin-bottom: 20px;
+}
+
+.welcome-header h2 {
+  font-size: 1.3rem;
+  margin-bottom: 5px;
+}
+
+.welcome-header p {
+  color: #777;
+  font-size: 0.9rem;
+}

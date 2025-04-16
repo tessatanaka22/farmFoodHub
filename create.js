@@ -19,11 +19,26 @@ document.addEventListener("DOMContentLoaded", function() {
             console.log("Passwords do not match!");
             alert("Passwords do not match! Please re-enter.");
         } else {
-            console.log("fullName:", full);
+            console.log("Full Name:", full);
             console.log("Email:", email);
-            console.log("PasswordEl:", pass);
-            console.log("box checked:", boxChecked);
-            alert("Account created")
+            console.log("Password:", pass);
+            console.log("Remember Me Checked:", boxChecked);
+
+            let existingUser = localStorage.getItem(email);
+            if (existingUser) {
+                alert("An account with this email already exists!");
+            } else {
+                let accountInfo = {
+                    fullName: full,
+                    email: email,
+                    password: pass,
+                    rememberMe: boxChecked
+                };
+                localStorage.setItem(email, JSON.stringify(accountInfo));
+
+                alert("Account created successfully!");
+                window.location.href = "login.html";  
+            }
         }
     });
 });

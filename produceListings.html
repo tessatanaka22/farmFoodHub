@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./produceListings.css" />
+    <title>Produce Listings</title>
+  </head>
+  <body>
+    <div class="header">
+        <div class="logo">
+            <img src="/img/logo.png" alt="FarmFoodHub Logo">
+            <div class="logo-text"></div>
+        </div>
+        <div class="user-info">
+            <img class="user-img" src="/img/john.png" alt="User Profile">
+            <div class="user-name">
+                <span>John</span>
+                <small>Farmer</small>
+            </div>
+            <div class="dropdown"><img src="/img/dropu.png" alt="dropd"/></div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="sidebar">
+            <a href="./farmersDashboard.html" class="menu-item">
+                <img src="/img/hom.png" alt="Dashboard"/>Dashboard
+            </a>
+            </a>
+            <a href="./farmersProfile.html" class="menu-item">
+                <img src="/img/prof.png" alt=""/>Profile
+            </a>
+            <a href="./produceListings.html" class="menu-item active">
+                <img src="/img/prod.png" alt=""/>Produce Listings
+            </a>
+            <a href="#" class="menu-item">
+                <img src="/img/ord.png" alt=""/> Orders and Earnings
+            </a>
+            <a href="#" class="menu-item">
+                <img src="/img/ai.png" alt=""/> AI Insights
+            </a>
+            <a href="#" class="menu-item">
+                <img src="/img/ch.png" alt=""/> Chats and Messages
+            </a>
+            <a href="#" class="menu-item">
+                <img src="/img/ch.png" alt=""/> Contact Food Bank
+            </a>
+            <a href="#" class="menu-item">
+                <img src="/img/se.png" alt=""/> Settings
+            </a>
+            <a href="#" class="menu-item">
+                <img src="/img/logout-box-r-line.png" alt=""/> Log Out
+            </a>
+        </div>
+        
+        <div class="main-content">
+            <div class="welcome">
+                <h2>Welcome, John's Farm</h2>
+                <p>Last login: March 15, 2025</p>
+            </div>
+            
+            <div class="stats-container">
+                <div class="stat-card green">
+                    <h3>Active Listings</h3>
+                    <div class="value">24</div>
+                </div>
+                <div class="stat-card blue">
+                    <h3>Total Revenue</h3>
+                    <div class="value">₦3,000,400</div>
+                </div>
+                <div class="stat-card orange">
+                    <h3>Donations</h3>
+                    <div class="value">156 kg</div>
+                </div>
+            </div>
+            
+            <h3>Stock Availability</h3>
+            <table class="stock-table">
+                <thead>
+                    <tr>
+                        <th>Produce Name</th>
+                        <th>Type</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Status
+
+                        </th>
+                        <th>Actions
+                           
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Organic Tomatoes</td>
+                        <td>Sell</td>
+                        <td>₦4000/kg</td>
+                        <td>50 kg</td>
+                        <td><span class="active-badge">Active</span></td>
+                        <td class="action-icons">
+                            <img
+                            <i>🗑️</i>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="produce-listings">
+                <h3>Produce Listings</h3>
+                <h3>Vegetables</h3>
+                <div class="produce-grid">
+                    <div class="produce-card">
+                        <img src="/api/placeholder/150/150" alt="Tomatoes" class="produce-img">
+                        <div class="produce-details">
+                            <h4>Tomatoes</h4>
+                            <p>Price: ₦4000/kg</p>
+                            <p>Stock: 50kg</p>
+                        </div>
+                    </div>
+                    <div class="produce-card">
+                        <img src="/api/placeholder/150/150" alt="Carrots" class="produce-img">
+                        <div class="produce-details">
+                            <h4>Carrots</h4>
+                            <p>Price: ₦4000/kg</p>
+                            <p>Stock: 50kg</p>
+                        </div>
+                    </div>
+                    <div class="produce-card">
+                        <img src="/api/placeholder/150/150" alt="Cabbages" class="produce-img">
+                        <div class="produce-details">
+                            <h4>Cabbages</h4>
+                            <p>Price: ₦4000/kg</p>
+                            <p>Stock: 50kg</p>
+                        </div>
+                    </div>
+                    <div class="produce-card">
+                        <img src="/api/placeholder/150/150" alt="Spinach" class="produce-img">
+                        <div class="produce-details">
+                            <h4>Spinach</h4>
+                            <p>Price: ₦4000/kg</p>
+                            <p>Stock: 50kg</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <h3>Tubers</h3>
+                <div class="produce-grid">
+                    <div class="produce-card">
+                        <img src="/api/placeholder/150/150" alt="Irish Potatoes" class="produce-img">
+                        <div class="produce-details">
+                            <h4>Irish Potatoes</h4>
+                            <p>Price: ₦4000/kg</p>
+                            <p>Stock: 50kg</p>
+                        </div>
+                    </div>
+                    <div class="produce-card">
+                        <img src="/api/placeholder/150/150" alt="Cassava" class="produce-img">
+                        <div class="produce-details">
+                            <h4>Cassava</h4>
+                            <p>Price: ₦4000/kg</p>
+                            <p>Stock: 50kg</p>
+                        </div>
+                    </div>
+                    <div class="produce-card">
+                        <img src="/api/placeholder/150/150" alt="Sweet Potatoes" class="produce-img">
+                        <div class="produce-details">
+                            <h4>Sweet Potatoes</h4>
+                            <p>Price: ₦4000/kg</p>
+                            <p>Stock: 50kg</p>
+                        </div>
+                    </div>
+                    <div class="produce-card">
+                        <img src="/api/placeholder/150/150" alt="Yams" class="produce-img">
+                        <div class="produce-details">
+                            <h4>Yams</h4>
+                            <p>Price: ₦4000/kg</p>
+                            <p>Stock: 50kg</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <h3>Cereals</h3>
+                <div class="produce-grid">
+                    <div class="produce-card">
+                        <img src="/api/placeholder/150/150" alt="Millet" class="produce-img">
+                        <div class="produce-details">
+                            <h4>Millet</h4>
+                            <p>Price: ₦4000/kg</p>
+                            <p>Stock: 50kg</p>
+                        </div>
+                    </div>
+                    <div class="produce-card">
+                        <img src="/api/placeholder/150/150" alt="Cow Peas" class="produce-img">
+                        <div class="produce-details">
+                            <h4>Cow Peas</h4>
+                            <p>Price: ₦4000/kg</p>
+                            <p>Stock: 50kg</p>
+                        </div>
+                    </div>
+                    <div class="produce-card">
+                        <img src="/api/placeholder/150/150" alt="Maize" class="produce-img">
+                        <div class="produce-details">
+                            <h4>Maize</h4>
+                            <p>Price: ₦4000/kg</p>
+                            <p>Stock: 50kg</p>
+                        </div>
+                    </div>
+                    <div class="produce-card">
+                        <img src="/api/placeholder/150/150" alt="Beans" class="produce-img">
+                        <div class="produce-details">
+                            <h4>Beans</h4>
+                            <p>Price: ₦4000/kg</p>
+                            <p>Stock: 50kg</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+  

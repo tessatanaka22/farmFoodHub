@@ -37,15 +37,6 @@
             text-align: right;
         }
         
-        .user-avatar {
-            width: 32px;
-            height: 32px;
-            background-color: #ccc;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
 
         .white-space {
     flex: 1;
@@ -86,13 +77,10 @@
         }
         
         .menu-item.active {
-            background-color: rgba(255, 255, 255, 0.3);
+            background-color:#ffefdb;
+            color: #ff8800;
         }
         
-        .menu-icon {
-            width: 20px;
-            text-align: center;
-        }
         
         /* Main Content */
         .main-content {

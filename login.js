@@ -1,5 +1,4 @@
-
-document.addEventListener("DOMContentLoaded", function() {
+/*document.addEventListener("DOMContentLoaded", function() {
     let emailInfo = document.getElementById("email");
     let password = document.getElementById("password");
     let remindBox = document.querySelector(".box");
@@ -48,4 +47,69 @@ document.addEventListener("DOMContentLoaded", function() {
             customAlert.style.display = "none";
         }, 10000);
     });
+});*/
+
+document.addEventListener("DOMContentLoaded", function () {
+  let emailInfo = document.getElementById("email");
+  let password = document.getElementById("password");
+  let remindBox = document.querySelector(".box");
+  let button = document.getElementById("button");
+
+  button.addEventListener("click", function (e) {
+    e.preventDefault(); // prevent form from submitting the default way
+
+    let email = emailInfo.value.trim();
+    let pass = password.value.trim();
+    let rememberMe = remindBox.checked;
+
+    // Construct the payload to send
+    const data = {
+      email: email,
+      password: pass,
+    };
+    console.log("praise");
+    fetch("http://127.0.0.1:8000/login/", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Login failed");
+        }
+        return response.json();
+      })
+      .then((result) => {
+        // Show success message
+        showAlert("Login successful!", true);
+
+        if (rememberMe) {
+          localStorage.setItem("email", email);
+          localStorage.setItem("token", result.token); // if the backend returns a token
+        }
+
+        setTimeout(() => {
+          window.location.href = "dashboard.html";
+        }, 2000);
+      })
+      .catch((error) => {
+        showAlert("Invalid email or password!", false);
+        console.error("Error:", error);
+      });
+  });
+
+  function showAlert(message, success = true) {
+    let customAlert = document.getElementById("customAlert");
+    let messageSpan = document.getElementById("alertMessage");
+
+    customAlert.style.backgroundColor = success ? "#328142" : "#b02a2a";
+    messageSpan.textContent = message;
+    customAlert.style.display = "block";
+
+    setTimeout(() => {
+      customAlert.style.display = "none";
+    }, 5000);
+  }
 });

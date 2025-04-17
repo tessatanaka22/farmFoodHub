@@ -1,204 +1,403 @@
-
-        * {
+ * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         
         body {
-            background-color: #f5f5f5;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
+            background-color: #f9f9f9;
         }
-
+        
+        /* Header Styles */
         .header {
-            background-color: #4CAF50;
-            color: white;
-            padding: 15px 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            background-color: #4CAF50;
+            padding: 10px 20px;
+            color: white;
         }
         
-        .logo {
+        .logo-container {
             display: flex;
             align-items: center;
-            gap: 10px;
-            font-size: 1.2rem;
-            font-weight: bold;
+        }*/
+        
+        .logo {
+            width: 40px;
+            height: 40px;
+            background-color: #FF9800;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 10px;
+        }
+         
+        .user-profile {
+            display: flex;
+            align-items: center;
         }
         
         .user-info {
-            display: flex;
-            align-items: center;
-            gap: 10px;
             text-align: right;
+            margin-right: 10px;
         }
         
-
+        .user-name {
+            font-weight: bold;
+        }
+        
+        .user-role {
+            font-size: 12px;
+        }
+        
+        .user-avatar {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            overflow: hidden;
+            background-color: #ddd;
+        }
+        
+        .user-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
         .white-space {
-    flex: 1;
-    height: 20px;
-    background-color: white;
-}
+            flex: 1;
+            height: 30px;
+            background-color: white;
+        }
+        
+        /* Layout */
         .container {
             display: flex;
-            flex: 1;
-            background-color: white;
         }
         
         /* Sidebar */
         .sidebar {
-            width: 275px;
-        }
-        
-        .menu-container {
+            width: 220px;
             background-color: #4CAF50;
-            padding: 20px;
-            height: auto;
-            border-radius: 0 0 10px 0;
+            padding: 20px 10px;
+        }
+            
+         .sidebar-menu {
+            list-style: none;
         }
         
-        .menu-item {
+        .sidebar-menu li {
+            margin-bottom: 8px;
+        }
+        
+        .sidebar-menu a {
             display: flex;
             align-items: center;
-            gap: 10px;
             color: white;
-            padding: 10px;
-            margin-bottom: 5px;
             text-decoration: none;
+            padding: 10px;
             border-radius: 5px;
+            transition: background-color 0.3s;
         }
         
-        .menu-item:hover {
+        .sidebar-menu a:hover {
             background-color: rgba(255, 255, 255, 0.2);
         }
         
-        .menu-item.active {
-            background-color:#ffefdb;
-            color: #ff8800;
+        .sidebar-menu a.active {
+            background-color: rgba(255, 255, 255, 0.3);
+            font-weight: bold;
         }
         
-        
+        .sidebar-menu i {
+            margin-right: 10px;
+            font-size: 16px;
+        }
+
         /* Main Content */
         .main-content {
             flex: 1;
             padding: 20px;
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .welcome-section {
-            margin-bottom: 30px;
             background-color: white;
         }
         
-        .welcome-title {
-            font-size: 24px;
+        .welcome-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .welcome-text h1 {
+            font-size: 22px;
             margin-bottom: 5px;
         }
         
-        .last-login {
+        .welcome-text p {
+            color: #666;
             font-size: 14px;
+        }
+        
+        .edit-button {
+            display: flex;
+            align-items: center;
+            background: none;
+            border: none;
+            color: #4CAF50;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        
+        .edit-button i {
+            margin-left: 5px;
         }
         
         /* Profile Section */
         .profile-section {
             background-color: white;
-            border-radius: 5px;
+            border-radius: 8px;
             padding: 20px;
             margin-bottom: 20px;
-            flex: 1;
-            display: flex;
-            flex-direction: column;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
         }
         
-        .section-header {
+        .profile-header {
             display: flex;
             justify-content: space-between;
+            align-items: center;
             margin-bottom: 20px;
         }
         
-        .section-title {
-            font-size: 18px;
-            font-weight: bold;
-        }
-        
-        .edit-button {
-            background-color: transparent;
-            border: none;
-            color: #4CAF50;
-            cursor: pointer;
+        .profile-header h2 {
             font-size: 16px;
-        }
-        
-        .profile-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
-        }
-        
-        .profile-item {
-            padding: 10px;
-            background-color: #f5f5f5;
-            border-radius: 5px;
-        }
-        
-        .gender {
-            display: flex;
-            gap: 20px;
-        }
-        
-        .gender-f {
-            display: flex;
-            align-items: center;
-            gap: 5px;
+            text-transform: uppercase;
+            color: #333;
         }
         
         .profile-content {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        .profile-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 20px;
+        }
+        
+        .profile-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .profile-info {
             flex: 1;
         }
         
-        .action-buttons {
-            display: flex;
-            justify-content: flex-end;
-            margin-top: auto;
-            padding-top: 20px;
+        .profile-info h3 {
+            font-size: 18px;
+            margin-bottom: 5px;
         }
         
-        .save-button {
+        .profile-info p {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        
+        .verified-badge {
+            display: inline-block;
+            background-color: #e6f7e6;
+            color: #4CAF50;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+        }
+        
+        .edit-profile-button {
             background-color: #4CAF50;
             color: white;
             border: none;
-            padding: 10px 20px;
+            padding: 8px 15px;
             border-radius: 5px;
             cursor: pointer;
+            font-size: 14px;
+            position: absolute;
+            right: 0;
         }
         
-        .save-button:hover {
-            background-color: #3e8e41;
-        }
-        
-        /* App Actions */
-        .app-actions {
+        .stats-container {
             display: flex;
             justify-content: space-between;
-            padding: 10px 20px;
-            background-color:E5E7EB;
-            border-top: 1px solid #ddd;
-            margin-top: auto;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
         }
         
-        .action-icon {
-            background-color: #0095f6;
-            color: white;
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        .stat-item {
+            text-align: center;
+            flex: 1;
+        }
+        
+        .stat-number {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        
+        .stat-label {
+            color: #666;
             font-size: 14px;
         }
+        
+        /* Products Section */
+        .products-section {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        
+        .products-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .products-header h2 {
+            font-size: 18px;
+            color: #333;
+        }
+        
+        .add-product-button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        
+        .add-product-button i {
+            margin-right: 5px;
+        }
+        
+        .product-item {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            border: 1px solid #eee;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        
+        .product-icon {
+            width: 40px;
+            height: 40px;
+            margin-right: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .product-icon img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+        
+        .product-info {
+            flex: 1;
+        }
+        
+        .product-name {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .product-price {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 3px;
+        }
+        
+        .product-status {
+            color: #4CAF50;
+            font-size: 12px;
+        }
+        
+        .product-actions {
+            display: flex;
+        }
+        
+        .product-action-button {
+            background: none;
+            border: none;
+            color: #666;
+            cursor: pointer;
+            margin-left: 10px;
+            font-size: 16px;
+        }
+        
+        /* Settings Section */
+        .settings-section {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        
+        .settings-section h2 {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        
+        .settings-group {
+            margin-bottom: 25px;
+        }
+        
+        .settings-group h3 {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .settings-item {
+            margin-bottom: 15px;
+        }
+        
+        .settings-item h4 {
+            font-size: 14px;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        
+        .settings-item p {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        
+        .language-dropdown {
+            width: 100%;
+            max-width: 300px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+            color: #333;
+            background-color: white;
+        }
+    

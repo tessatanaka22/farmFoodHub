@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:  -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+body{
+    background-color: #f5f5f5;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.header{
+    background-color: white;
+    padding: 15px 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+}
+.header-title{
+    font-size: 14px;
+    color: #333;
+    font-weight:500;
+}
+.content{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.logout-card{
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 360px;
+    overflow: hidden;
+    text-align: center;
+}
+.logo-container{
+    padding: 30px 0 15px;
+}
+.logo{
+    height:40px;
+    margin-bottom: 10px;
+}
+.logout-icon{
+    background-color: #e6f9ef;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px auto;
+}
+.logout-title{
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+.logout-message{
+     font-size: 13px;
+     color: #666;
+     margin-bottom: 25px;
+     padding: 0 20px;
+}
+.login-button{
+    background-color: #10b981;
+    color: white;
+    border: none;
+    padding: 12px 0;
+    width: 90%;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+.return-button{
+    color: white;
+    border: none;
+    padding: 12px 0;
+    width: 90%;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+.back-link{
+    margin-right: 6px;
+    font-weight: 14px;
+}
+.divider{
+    border-top: 1px solid #eee;
+    margin: 0 15px 15px;
+}
+.help-links{
+    display: flex;
+    justify-content: center;
+    padding: 0 15px;
+    margin-bottom: 15px;
+    font-size: 12px;
+    color: #777;
+}
+.help-links a{
+    color: #777;
+    text-decoration: none;
+    margin: 0 5px;
+}
+.footer{
+    background-color: #f9f9f9;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+.footer a{
+    color: #777;
+    text-decoration: none;
+    font-size: 11px;
+}
+.footer-divider{
+    color: #ccc;
+}
+.login-button i{
+    margin-right: 5px;
+}

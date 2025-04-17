@@ -10,7 +10,6 @@
     <div class="header">
         <div class="logo">
             <img src="/img/logo.png" alt="FarmFoodHub Logo">
-            <div class="logo-text"></div>
         </div>
         <div class="user-info">
             <img class="user-img" src="/img/john.png" alt="User Profile">
@@ -21,6 +20,8 @@
             <div class="dropdown"><img src="/img/dropu.png" alt="dropd"/></div>
         </div>
     </div>
+    <div class="white-space"></div>
+</div>
     
     <div class="container">
         <div class="sidebar">
@@ -34,11 +35,11 @@
             <a href="./produceListings.html" class="menu-item active">
                 <img src="/img/prod.png" alt=""/>Produce Listings
             </a>
-            <a href="#" class="menu-item">
-                <img src="/img/ord.png" alt=""/> Orders and Earnings
+            <a href="./farmersOrdersAndEarnings.html">Orders and Earnings</a> class="menu-item">
+                <img src="/img/ord.png" alt=""/>
             </a>
-            <a href="#" class="menu-item">
-                <img src="/img/ai.png" alt=""/> AI Insights
+            <a href="./farmersAIinsights.html">AI Insights</a> class="menu-item">
+                <img src="/img/ai.png" alt=""/>
             </a>
             <a href="#" class="menu-item">
                 <img src="/img/ch.png" alt=""/> Chats and Messages
@@ -46,11 +47,11 @@
             <a href="#" class="menu-item">
                 <img src="/img/ch.png" alt=""/> Contact Food Bank
             </a>
-            <a href="#" class="menu-item">
+            <a href="./settingsPages.html" class="menu-item">
                 <img src="/img/se.png" alt=""/> Settings
             </a>
-            <a href="#" class="menu-item">
-                <img src="/img/logout-box-r-line.png" alt=""/> Log Out
+            <a href="./loggedout.html"> class="menu-item">
+                <img src="/img/logout-box-r-line.png" alt=""/>Log out
             </a>
         </div>
         
@@ -97,10 +98,10 @@
                         <td>Sell</td>
                         <td>₦4000/kg</td>
                         <td>50 kg</td>
-                        <td><span class="active-badge">Active</span></td>
+                        <td><div class="active-badge">Active</div></td>
                         <td class="action-icons">
-                            <img
-                            <i>🗑️</i>
+                            <img src="/img/b.png" alt=""/>
+                            <img src="/img/dde.png" alt=""/>
                         </td>
                     </tr>
                 </tbody>
@@ -108,10 +109,11 @@
             
             <div class="produce-listings">
                 <h3>Produce Listings</h3>
+                <button class="btn">Add New Listing</button>
                 <h3>Vegetables</h3>
                 <div class="produce-grid">
                     <div class="produce-card">
-                        <img src="/api/placeholder/150/150" alt="Tomatoes" class="produce-img">
+                        <img src="/img/tomatoe.png" alt="Tomatoes" class="produce-img">
                         <div class="produce-details">
                             <h4>Tomatoes</h4>
                             <p>Price: ₦4000/kg</p>
@@ -119,7 +121,7 @@
                         </div>
                     </div>
                     <div class="produce-card">
-                        <img src="/api/placeholder/150/150" alt="Carrots" class="produce-img">
+                        <img src="/img/carrots.jpg" alt="Carrots" class="produce-img">
                         <div class="produce-details">
                             <h4>Carrots</h4>
                             <p>Price: ₦4000/kg</p>
@@ -127,7 +129,7 @@
                         </div>
                     </div>
                     <div class="produce-card">
-                        <img src="/api/placeholder/150/150" alt="Cabbages" class="produce-img">
+                        <img src="/img/cab.png" alt="Cabbages" class="produce-img">
                         <div class="produce-details">
                             <h4>Cabbages</h4>
                             <p>Price: ₦4000/kg</p>
@@ -135,7 +137,7 @@
                         </div>
                     </div>
                     <div class="produce-card">
-                        <img src="/api/placeholder/150/150" alt="Spinach" class="produce-img">
+                        <img src="/img/spin.png" alt="Spinach" class="produce-img">
                         <div class="produce-details">
                             <h4>Spinach</h4>
                             <p>Price: ₦4000/kg</p>
@@ -147,7 +149,7 @@
                 <h3>Tubers</h3>
                 <div class="produce-grid">
                     <div class="produce-card">
-                        <img src="/api/placeholder/150/150" alt="Irish Potatoes" class="produce-img">
+                        <img src="/img/waru.png" alt="Irish Potatoes" class="produce-img">
                         <div class="produce-details">
                             <h4>Irish Potatoes</h4>
                             <p>Price: ₦4000/kg</p>
@@ -155,7 +157,7 @@
                         </div>
                     </div>
                     <div class="produce-card">
-                        <img src="/api/placeholder/150/150" alt="Cassava" class="produce-img">
+                        <img src="/img/cas.png" alt="Cassava" class="produce-img">
                         <div class="produce-details">
                             <h4>Cassava</h4>
                             <p>Price: ₦4000/kg</p>
@@ -163,7 +165,7 @@
                         </div>
                     </div>
                     <div class="produce-card">
-                        <img src="/api/placeholder/150/150" alt="Sweet Potatoes" class="produce-img">
+                        <img src="/img/ngas.png" alt="Sweet Potatoes" class="produce-img">
                         <div class="produce-details">
                             <h4>Sweet Potatoes</h4>
                             <p>Price: ₦4000/kg</p>
@@ -171,7 +173,7 @@
                         </div>
                     </div>
                     <div class="produce-card">
-                        <img src="/api/placeholder/150/150" alt="Yams" class="produce-img">
+                        <img src="/img/yam.png" alt="Yams" class="produce-img">
                         <div class="produce-details">
                             <h4>Yams</h4>
                             <p>Price: ₦4000/kg</p>
@@ -183,7 +185,7 @@
                 <h3>Cereals</h3>
                 <div class="produce-grid">
                     <div class="produce-card">
-                        <img src="/api/placeholder/150/150" alt="Millet" class="produce-img">
+                        <img src="/img/mbosho.png" alt="Millet" class="produce-img">
                         <div class="produce-details">
                             <h4>Millet</h4>
                             <p>Price: ₦4000/kg</p>
@@ -191,7 +193,7 @@
                         </div>
                     </div>
                     <div class="produce-card">
-                        <img src="/api/placeholder/150/150" alt="Cow Peas" class="produce-img">
+                        <img src="/img/pea.png" alt="Cow Peas" class="produce-img">
                         <div class="produce-details">
                             <h4>Cow Peas</h4>
                             <p>Price: ₦4000/kg</p>
@@ -199,7 +201,7 @@
                         </div>
                     </div>
                     <div class="produce-card">
-                        <img src="/api/placeholder/150/150" alt="Maize" class="produce-img">
+                        <img src="/img/mahi.png" alt="Maize" class="produce-img">
                         <div class="produce-details">
                             <h4>Maize</h4>
                             <p>Price: ₦4000/kg</p>
@@ -207,7 +209,7 @@
                         </div>
                     </div>
                     <div class="produce-card">
-                        <img src="/api/placeholder/150/150" alt="Beans" class="produce-img">
+                        <img src="/img/be.png" alt="Beans" class="produce-img">
                         <div class="produce-details">
                             <h4>Beans</h4>
                             <p>Price: ₦4000/kg</p>
@@ -215,9 +217,178 @@
                         </div>
                     </div>
                 </div>
+                <h3>Fruits</h3>
+                <div class="produce-grid">
+                    <div class="produce-card">
+                        <img src="/img/omae.png" alt="Tomatoes" class="produce-img">
+                        <div class="produce-details">
+                            <h4>Tomatoes</h4>
+                            <p>Price: ₦4000/kg</p>
+                            <p>Stock: 50kg</p>
+                        </div>
+                    </div>
+                    <div class="produce-card">
+                        <img src="/img/ora.png" alt="Oranges" class="produce-img">
+                        <div class="produce-details">
+                            <h4>Oranges</h4>
+                            <p>Price: ₦4000/kg</p>
+                            <p>Stock: 50kg</p>
+                        </div>
+                    </div>
+                    
+                    <div class="produce-card">
+                        <img src="/img/app.png" alt="apples" class="produce-img">
+                        <div class="produce-details">
+                            <h4>Apples</h4>
+                            <p>Price:N4000/kg</p>
+                            <p>Stock:50kg</p>
+                        </div>
+                    </div>
+
+                    <div class="produce-card">
+                        <img src="/img/mang.png" alt="mangoes" class="produce-img">
+                        <div class="produce-details">
+                            <h4>Mangoes</h4>
+                            <p>Price:N4000/kg</p>
+                            <p>Stock:50kg</p>
+                        </div>
+                    </div>
+                </div>
+                <h3>LiveStock Products</h3>
+                <div class="produce-grid">
+                    <div class="produce-card">
+                        <img src="/img/maz.png" alt="milk" class="produce-img">
+                        <div class="produce-details">
+                            <h4>Milk</h4>
+                            <p>Price: N4000/kg</p>
+                            <p>Stock: 50kg</p>
+                        </div>
+                    </div>
+                 <div class="produce-card">
+                    <img src="/img/go.png" alt="goats" class="produce-img">
+                    <div class="produce-details">
+                        <h4>Goats</h4>
+                        <p>Price:N4000/kg</p>
+                        <p>Stock:50kg</p>
+                    </div>
+                </div>
+                <div class="produce-card">
+                    <img src="/img/rab.png" alt="rabbits" class="produce-img">
+                    <div class="produce-details">
+                        <h4>Rabbits</h4>
+                        <p>Price:N4000/kg</p>
+                        <p>Stock:50kg</p>
+                    </div>
+                </div>
+                <div class="produce-card">
+                    <img src="/img/pi.png" alt="pigs" class="produce-img">
+                    <div class="produce-details">
+                        <h4>Pigs</h4>
+                        <p>Price:N4000/kg</p>
+                        <p>Stock:50kg</p>
+                    </div>
+                </div>
+
+                <h3>Poultry Products</h3>
+
+               <div class="produce-grid">
+                    <div class="produce-card">
+                        <img src="/img/omae.png" alt="Tomatoes" class="produce-img">
+                        <div class="produce-details">
+                            <h4>Tomatoes</h4>
+                            <p>Price: ₦4000/kg</p>
+                            <p>Stock: 50kg</p>
+                        </div>
+                    </div>
+                </div>
+                    <div class="produce-card">
+                        <img src="/img/chic.png" alt="chickens" class="produce-img">
+                        <div class="produce-details">
+                            <h4>Chickens</h4>
+                            <p>Price:N4000/kg</p>
+                            <p>Stock:50kg</p>
+                        </div>
+                    </div>
+
+<div class="produce-card">
+<img src="/img/goo.png" alt="pingeons" class="produce-img">
+<div class="produce-details">
+<h4>Pigeons</h4>
+<p>Price:N4000/kg</p>
+<p>Stock:50kg</p>
+</div>
+</div>
+
+<div class="produce-card">
+    <img src="/img/turk.png" alt="turkeys" class="produce-img">
+    <div class="produce-details">
+    <h4>Turkeys</h4>
+    <p>Price:N4000/kg</p>
+    <p>Stock:50kg</p>
+    </div>
+    </div>
+</div>
+    </div>
+
+    <div class="category-section">
+        <div class="category-title">Product Category</div>
+        <table class="product-category-table">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Harvest Date</th>
+                    <th>Order</th>
+                    <th>Stock Alert</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Fruits</td>
+                    <td>April 20th, 2025</td>
+                    <td>10</td>
+                    <td><img src="/img/bee.png" alt=""/></i></td>
+                </tr>
+                <tr>
+                    <td>Vegetables</td>
+                    <td>April 20th, 2025</td>
+                    <td>10</td>
+                    <td><img src="/img/bee.png" alt=""/></td>
+                </tr>
+                <tr>
+                    <td>Tubers</td>
+                    <td>April 20th, 2025</td>
+                    <td>10</td>
+                    <td><img src="/img/bee.png" alt=""/></td>
+                </tr>
+                <tr>
+                    <td>Cereals</td>
+                    <td>April 20th, 2025</td>
+                    <td>10</td>
+                    <td><img src="/img/bee.png" alt=""/></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <div class="category-section">
+        <div class="category-title">Inquiries</div>
+        <div class="chat-input">
+            <div class="user-image">
+                <i class="fas fa-user"></i>
             </div>
+            <input type="text" placeholder="What kind of fertilizers do you use...">
+            <button>
+                <img src="/img/gg_add.png" alt=""/>
+            </button>
         </div>
     </div>
+    
+    <div class="button-container">
+        <button class="save-button">Save as Draft</button>
+        <button class="publish-button">Publish Listing</button>
+    </div>
+</div>
+
 </body>
 </html>
   

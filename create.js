@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
       console.log(accountInfo);
       try {
         const response = await fetch(
-          "https://farmfoodhub-backend.onrender.com/api/register/",
+          "https://farmfoodhub-backend.onrender.com/register/",
           {
             method: "POST",
             headers: {

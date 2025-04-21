@@ -419,3 +419,104 @@ hr {
     margin-bottom: 40px;
 }
 /* end of footer */
+
+
+/* Media Queries */ @media (max-width: 1200px) {
+
+    .livestock-div,
+    .poultry-div,
+    .grains-div,
+    .vegatables-div,
+    .dairy-div,
+    .roots-div {
+        width: calc(50% - 20px);
+    }
+
+    .dropdown-container {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .section {
+        padding: 10px;
+    }
+
+    .search-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .dropdown-container {
+        flex-direction: column;
+    }
+
+    .main-section {
+        gap: 20px;
+    }
+
+    .livestock-div,
+    .poultry-div,
+    .grains-div,
+    .vegatables-div,
+    .dairy-div,
+    .roots-div {
+        width: 100%;
+    }
+
+    .image-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .first-row,
+    .second-row,
+    .third-row,
+    .fourth-row {
+        flex: 1 1 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        margin: 10px;
+    }
+
+    .logo img {
+        width: 100px;
+    }
+
+    .search-input {
+        font-size: 1rem;
+    }
+
+    .dropdown-button {
+        font-size: 1rem;
+        padding: 8px 12px;
+    }
+
+    .title {
+        font-size: 1rem;
+    }
+
+    .see-all {
+        font-size: 0.9rem;
+    }
+
+    .image-grid img {
+        height: 80px;
+    }
+
+    .footer-bottom p {
+        font-size: 0.9rem;
+    }
+}

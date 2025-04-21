@@ -473,3 +473,102 @@ hr {
   margin-top: 20px;
   margin-bottom: 40px;
 }
+
+
+
+
+/* Media Queries */
+@media (max-width: 1200px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero-text {
+    margin-left: 20px;
+  }
+
+  .mission-container,
+  .sec-2-container {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    margin: 10px;
+  }
+
+  nav ul {
+    justify-content: center;
+  }
+
+  .hero {
+    height: 50vh;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 0.9rem;
+  }
+
+  .mission-container,
+  .sec-2-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .first-row,
+  .second-row,
+  .third-row,
+  .fourth-row {
+    flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo img {
+    width: 100px;
+  }
+
+  .hero {
+    height: 40vh;
+  }
+
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero p {
+    font-size: 0.8rem;
+  }
+
+  .mission-icon,
+  .sec-2-icons {
+    font-size: 1.2rem;
+    width: 60px;
+    height: 60px;
+  }
+
+  .partner-card {
+    padding: 15px 20px;
+    min-width: 120px;
+    font-size: 0.9rem;
+  }
+
+  .join-community h2 {
+    font-size: 1.5rem;
+  }
+
+  .join-community p {
+    font-size: 0.9rem;
+  }
+}

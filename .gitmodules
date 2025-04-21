@@ -1,0 +1,3 @@
+[submodule "farmFoodhub"]
+	path = farmFoodhub
+	url = https://github.com/tinotendapraise/farmFoodHub.git

@@ -1,160 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>farmersProfile</title>
-  <link rel="stylesheet" href="/farmersProfile.css" /> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FarmFoodHub - Dashboard</title>
+    <link rel="stylesheet" href="./farmersProfile.css"/>
 </head>
+
 <body>
-    <div class="header">
+<!-- Header -->
+<header class="header">
+    <div class="logo-container">
         <div class="logo">
-            <img src="/img/logo.png" alt=""/>
+            <img src="/img/logo.png" alt="" />
+      </div>
         </div>
+  
+    <div class="user-profile">
         <div class="user-info">
-            <img src="/img/john.png"  alt=""/>
-            <p>John</p>
-            <p>Farmer</p>
-            <img src="/img/dropu.png" alt=""/>
-            <div class="dropdown-icon"></div>
+            <div class="user-avatar">
+                <img src="/img/john.png" alt="User Avatar">
+            </div>
+            <div class="user-name">John</div>
+            <div class="user-role">Farmer</div>
+        </div>
+        
+        <div class="dropdown-icon"><img src="/img/dropu.png" alt=""/></div>
+    </div>
+    
+</header>
+<div class="white-space"></div>
+        </div>
+
+<!-- Main Container -->
+<div class="container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <ul class="sidebar-menu">
+            <li><a href="./farmersDashboard.html">
+                <img src="/img/hom.png" alt=""/> Dashboard
+            </a></li>
+            <li><a href="./farmersProfile.html" class="active">
+                <img src="/img/prof.png" alt=""/> Profile
+            </a></li>
+            <li><a href="./produceListings.html">
+                <img src="/img/prod.png" alt=""/> Produce Listings
+            </a></li>
+            <li><a href="./farmersOrdersAndEarnings.html">
+                <img src="/img/ord.png" alt=""/> Orders and Earnings
+            </a></li>
+            <li><a href="./farmersAIinsights.html">
+                <img src="/img/ai.png" alt=""/>AI Insights
+            </a></li>
+            <li><a href="#">
+                <img src="/img/cha.png" alt=""/> Chats and Messages
+            </a></li>
+            <li><a href="#">
+                <img src="/img/ch.png" alt=""/> Contact Food Bank
+            </a></li>
+            <li><a href="./settingsPages.html">
+                <img src="/img/se.png" alt=""/> Settings
+            </a></li>
+            <li><a href="./loggedout.html">
+                <img src="/img/logout-box-r-line.png" alt=""/> Log Out
+            </a></li>
+        </ul>
+    </div>
+    
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Welcome Section -->
+        <div class="welcome-section">
+            <div class="welcome-text">
+                <h1>Welcome, John's Farm</h1>
+                <p>Last login: March 15, 2025</p>
+            </div>
+            <button class="edit-button">
+                <img src="/img/ddy.png" alt=""/>
+            </button>
+        </div>
+        
+        <!-- Profile Section -->
+        <div class="profile-section">
+            <div class="profile-header">
+                <h2>PROFILE</h2>
+            </div>
+            <div class="profile-content">
+                <div class="profile-avatar">
+                    <img src="/img/john.png" alt="John Anderson">
+                </div>
+                <div class="profile-info">
+                    <h3>John Anderson</h3>
+                    <p>Green Valley Organic Farm</p>
+                    <span class="verified-badge">Verified Farmer</span>
+                </div>
+                <button class="edit-profile-button"><a href="./editProfile.html">Edit Profile</a></button>
+            </div>
+            <div class="stats-container">
+                <div class="stat-item">
+                    <div class="stat-number">127</div>
+                    <div class="stat-label">Products</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">1,240</div>
+                    <div class="stat-label">Orders</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">4.8</div>
+                    <div class="stat-label">Rating</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Products Section -->
+        <div class="products-section">
+            <div class="products-header">
+                <h2>My Products</h2>
+                <button class="add-product-button">
+                    <img src="/img/pl.png" alt=""/>
+                    <img src="/img/add.png" alt=""/>
+                </button>
+            </div>
+            <div class="product-list">
+                <div class="product-item">
+                    <div class="product-icon">
+                        <img src="/img/du.png"/>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-name">Organic Carrots</div>
+                        <div class="product-price">$2.99/lb</div>
+                        <div class="product-status">In Stock</div>
+                    </div>
+                    <div class="product-actions">
+                        <button class="product-action-button"><img src="/img/tt.png" alt=""/></button>
+                        <button class="product-action-button"><img src="/img/bdel.png" alt=""/></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Settings Section -->
+        <div class="settings-section">
+            <h2>Settings</h2>
+            
+            <div class="settings-group">
+                <h3>Notification Preferences</h3>
+                <div class="settings-item">
+                    <h4>Order Notifications</h4>
+                    <p>Receive notifications for new orders</p>
+                </div>
+                <div class="settings-item">
+                    <h4>Marketing Updates</h4>
+                    <p>Receive updates about promotions</p>
+                </div>
+            </div>
+            
+            <div class="settings-group">
+                <h3>Language Preferences</h3>
+                <div class="settings-item">
+                    <select class="language-dropdown">
+                        <option value="en-us">English (US)</option>
+                        <option value="es">Spanish</option>
+                        <option value="fr">French</option>
+                    </select>
+                </div>
+            </div>
         </div>
     </div>
-
-    <!-- Gap between header and content -->
-    <div class="white-space"></div>
-        </div>
-
-
-    <!-- Main Container -->
-    <div class="container">
-        <!-- Sidebar -->
-        <div class="sidebar">
-            <div class="menu-container">
-                <a href="./farmersDashboard.html" class="menu-item">
-                    <div class="menu-icon">
-                    <img src="/img/hom.png" alt=""/>
-
-                    </div>
-                    Dashboard
-                </a>
-                <a href="./farmersProfile.html" class="menu-item active">
-                    <div class="menu-icon">
-                        <img src="/img/prof.png" alt=""/>
-                    </div>
-                    Profile
-                </a>
-                <a href="./produceListings.html" class="menu-item">
-                    <div class="menu-icon">
-                        <img src="/img/prod.png" alt=""/>
-                    </div>
-                    Produce Listings
-                </a>
-                <a href="#" class="menu-item">
-                    <div class="menu-icon">
-                        <img src="/img/ord.png" alt=""/>
-                    </div>
-                    Orders and Earnings
-                </a>
-                <a href="#" class="menu-item">
-                    <div class="menu-icon">
-                        <img src="/img/ai.png" alt=""/>
-                    </div>
-                    AI Insights
-                </a>
-                <a href="#" class="menu-item">
-                    <div class="menu-icon">
-                        <img src="/img/cha.png" alt=""/>
-                    </div>
-                    Chats and Messages
-                </a>
-                <a href="#" class="menu-item">
-                    <div class="menu-icon">
-                        <img src="/img/ch.png" alt=""/>
-                    </div>
-                    Contact Food Bank
-                </a>
-                <a href="#" class="menu-item">
-                    <div class="menu-icon">
-                        <img src="/img/se.png" alt=""/>
-                    </div>
-                    Settings
-                </a>
-                <a href="#" class="menu-item">
-                    <div class="menu-icon">
-                        <img src="/img/logout-box-r-line.png" alt=""/>
-                    </div>
-                    Log Out
-                </a>
-            </div>
-        </div>
-
-        <!-- Main Content -->
-        <div class="main-content">
-            <div class="welcome-section">
-                <h1 class="welcome-title">Welcome, John's Farm</h1>
-                <p class="last-login">Last login: March 15, 2025</p>
-            </div>
-
-            <div class="profile-section">
-                <div class="section-header">
-                    <h2 class="section-title">PROFILE</h2>
-                    <button class="edit-button">Edit 
-                        <img src="/img/ed.png" alt=""/>
-                    </button>
-                </div>
-
-                <div class="profile-content">
-                    <h3>Personal Information</h3>
-                    <div class="profile-grid">
-                        <div class="profile-item">
-                            <strong>Name:</strong> John Anderson
-                        </div>
-                        <div class="profile-item">
-                            <strong>Age:</strong> 34 years
-                        </div>
-                        <div class="profile-item">
-                            <strong>Contact:</strong> +234 953 333 3555
-                        </div>
-                        <div class="profile-item">
-                            <div class="gender">
-                                <div class="gender-f">
-                                    <img src="/img/do.png" alt=""/> Male
-                                </div>
-                                <div class="gender-f">
-                                    <img src="/img/fe.png" alt=""/> Female
-                                </div>
-                            </div>
-                        </div>
-                        <div class="profile-item">
-                            <strong>Location:</strong> Lagos, Nigeria
-                        </div>
-                        <div class="profile-item">
-                            <strong>Years in Farming:</strong> 4 Years
-                        </div>
-                    </div>
-
-                    <h3 style="margin-top: 20px;">Farm Details</h3>
-                    <div class="profile-grid">
-                        <div class="profile-item">
-                            <strong>Type of Farming:</strong> Mixed Farming
-                        </div>
-                        <div class="profile-item">
-                            <strong>Farm size:</strong> 3 Acres
-                        </div>
-                        <div class="profile-item">
-                            <strong>Crops grown:</strong> Millet, Rice, Beans
-                        </div>
-                        <div class="profile-item">
-                            <strong>Livestock:</strong> Rabbit, Goats, Sheep
-                        </div>
-                    </div>
-                </div>
-
-                <div class="action-buttons">
-                    <button class="save-button">Save Changes</button>
-                </div>
-            </div>
-        </div>
-    </div>
+</div>
 </body>
 </html>
+        

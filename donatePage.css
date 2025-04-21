@@ -337,3 +337,128 @@ img div{
     font-size: 14px;
     font-weight: bold;
 }
+.partner-section, .donation-section {
+    text-align: center;
+    padding: 40px;
+}
+.partner-section {
+    background: #F8E8C8;
+}
+.partner-options {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+.partner-box {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    width: 150px;
+}
+.partner-button {
+    margin-top: 20px;
+    background: green;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.donation-section {
+    background: black;
+    color: white;
+}
+.donation-buttons button {
+    background: green;
+    color: white;
+    padding: 10px 15px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.donation-buttons .request {
+    background: orange;
+}
+
+.donation-buttons .pwu{
+    background: #f8f8f8;
+    color: black;
+}
+/* Footer */
+footer {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 50px;
+}
+
+.first-row {
+    max-width: 230px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.social-icons-footer {
+    display: flex;
+    gap: 16px;
+    cursor: pointer;
+}
+
+.second-row {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.second-row h3 {
+    margin-bottom: 20px;
+}
+
+.second-row p {
+    cursor: pointer;
+}
+
+.third-row {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.third-row h3 {
+    margin-bottom: 20px;
+}
+
+.third-row p {
+    cursor: pointer;
+}
+
+.fourth-row {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-right: 90px;
+}
+
+.fourth-row h3 {
+    margin-bottom: 20px;
+}
+
+.fourth-row p {
+    max-width: 230px;
+}
+
+.fourth-row input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.p2025{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}

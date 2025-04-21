@@ -128,16 +128,21 @@ section {
   display: flex;
   justify-content: center;
 }
-.recommendations {
+.pricing-model {
   background-color: #e1eee6;
-  padding: 30px;
-  text-align: center;
+  padding: 50px;
+  border-radius: 10px;
+  width: 45%;
 }
-.soil,
-.planting-time {
-  background-color: white;
-  border: 2px solid white;
-  padding: 5px;
-  border-radius: 5px;
-  margin: 8px;
+.pricing-model button {
+  background-color: #4caf50;
+  color: white;
+  border: 2px solid #4caf50;
+  padding: 8px;
+  margin: 5px;
+  border-radius: 10px;
+}
+.pricing-model a {
+  text-decoration: none;
+  color: white;
 }

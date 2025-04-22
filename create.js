@@ -26,20 +26,24 @@ document.addEventListener("DOMContentLoaded", function () {
       console.log("Remember Me Checked:", boxChecked);
 
       let accountInfo = {
-        fullName: full,
+        username: full,
         email: email,
         password: pass,
-        rememberMe: boxChecked,
+        password2: check,
+        //rememberMe: boxChecked,
       };
       console.log(accountInfo);
       try {
-        const response = await fetch("http://127.0.0.1:8000/register/", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(accountInfo),
-        });
+        const response = await fetch(
+          "https://farmfoodhub-backend.onrender.com/register/",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(accountInfo),
+          }
+        );
 
         if (response.ok) {
           const result = await response.json();

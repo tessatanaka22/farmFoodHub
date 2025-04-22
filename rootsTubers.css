@@ -39,12 +39,21 @@
 }
 
 .cart {
-    margin-left: -40px;
+    margin-left: -90px;
     font-size: 20px;
     color: #4CAF50;
     cursor: pointer;
 }
-
+.cart-badge {
+    position: absolute;
+    top: 20px;
+    right: 120px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 1px 4px;
+    font-size: 10px;
+}
 
 
 /* hero section */
@@ -354,6 +363,41 @@ hr {
 }
 
 /* end of footer */
+
+
+
+/* Overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.overlay-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 60%;
+    max-width: 1500px;
+    text-align: center;
+}
+
+.overlay-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
 
 /* Media Queries */ 
 @media (max-width: 1200px) {

@@ -21,6 +21,7 @@
             <div class="search">
                 <input type="text" class="search-input" placeholder="Search for fresh farm products">
                 <i class="fas fa-shopping-cart cart"></i>
+                <span class="cart-badge">0</span>
                 <i class="fas fa-search search-icon"></i>
             </div>
         </div>
@@ -37,7 +38,7 @@
     <div class="products-section">
 
     <!-- Product 1 -->
-    <div class="product">
+      <div class="product" data-name="Farm Fresh Eggs" data-price="$3/kg" data-farmer="Mr Donatus Clement, Minna">
       <img src="img/milk2.jpg" alt="Product 1" class="product-img" />
       <h2>Farm Fresh Eggs</h2>
       <div class="farmer-info">
@@ -63,7 +64,7 @@
     </div>
 
     <!-- Product 2 -->
-    <div class="product">
+      <div class="product" data-name="Fresh Milk" data-price="$5/litre" data-farmer="Mrs Amina Yusuf, Abuja">
       <img src="img/milk1.jpg" alt="Product 2" class="product-img" />
       <h2>Fresh Milk</h2>
       <div class="farmer-info">
@@ -89,7 +90,7 @@
     </div>
 
     <!-- Product 3 -->
-    <div class="product">
+      <div class="product" data-name="Fresh Cheese" data-price="$8/kg" data-farmer="Mr James Obi, Kaduna">
       <img src="img/cheese.jpg" alt="Product 3" class="product-img" />
       <h2>Fresh Cheese</h2>
       <div class="farmer-info">
@@ -115,7 +116,7 @@
     </div>
 
     <!-- Product 4 -->
-    <div class="product">
+      <div class="product" data-name="Organic Butter" data-price="$4/kg" data-farmer="Mrs Fatima Ali, Kano">
       <img src="img/organic butter.jpg" alt="Product 4" class="product-img" />
       <h2>Organic Butter</h2>
       <div class="farmer-info">
@@ -123,7 +124,7 @@
         <p>Mrs Fatima Ali, Kano</p>
       </div>
       <div class="price-rating">
-        <p class="price">$4.00/litre</p>
+        <p class="price">$4.00/kg</p>
         <p>In Stock</p>
       </div>
       <div class="rating">
@@ -142,7 +143,7 @@
    
     
     <!-- Product 5 -->
-    <div class="product">
+      <div class="product" data-name="Fresh Mozzarella Cheese" data-price="$4/kg" data-farmer="Mrs Fatima Ali, Kano">
       <img src="img/mozarella.jpg" alt="Product 4" class="product-img" />
       <h2>Fresh Mozzarella Cheese</h2>
       <div class="farmer-info">
@@ -150,7 +151,7 @@
         <p>Mrs Fatima Ali, Kano</p>
       </div>
       <div class="price-rating">
-        <p class="price">$4.00/litre</p>
+        <p class="price">$4.00/kg</p>
         <p>In Stock</p>
       </div>
       <div class="rating">
@@ -169,7 +170,7 @@
 
 
     <!-- Product 6 -->
-    <div class="product">
+      <div class="product" data-name="Fresh Hota Cheese" data-price="$4/kg" data-farmer="Mrs Fatima Ali, Kano">
       <img src="img/hota cheese.jpg" alt="Product 4" class="product-img" />
       <h2>Fresh Hota Cheese</h2>
       <div class="farmer-info">
@@ -177,7 +178,7 @@
         <p>Mrs Fatima Ali, Kano</p>
       </div>
       <div class="price-rating">
-        <p class="price">$4.00/litre</p>
+        <p class="price">$4.00/kg</p>
         <p>In Stock</p>
       </div>
       <div class="rating">
@@ -195,7 +196,7 @@
     </div>
 
     <!-- Product 7 -->
-    <div class="product">
+      <div class="product" data-name="Fresh Cheddar Cheese" data-price="$4/kg" data-farmer="Mrs Fatima Ali, Kano">
       <img src="img/cheddar cheese.png" alt="Product 4" class="product-img" />
       <h2>Fresh Cheddar Cheese</h2>
       <div class="farmer-info">
@@ -203,7 +204,7 @@
         <p>Mrs Fatima Ali, Kano</p>
       </div>
       <div class="price-rating">
-        <p class="price">$4.00/litre</p>
+        <p class="price">$4.00/kg</p>
         <p>In Stock</p>
       </div>
       <div class="rating">
@@ -221,7 +222,7 @@
     </div>
 
     <!-- Product 8 -->
-    <div class="product">
+            <div class="product" data-name="Fresh Plain Yogurt" data-price="$4/litre" data-farmer="Mrs Fatima Ali, Kano">
       <img src="img/plain yogurt.jpg" alt="Product 4" class="product-img" />
       <h2>Fresh Plain Yogurt</h2>
       <div class="farmer-info">
@@ -247,7 +248,7 @@
     </div>
 
     <!-- Product 9 -->
-    <div class="product">
+      <div class="product" data-name="Fresh Flavored Yogurt" data-price="$4/litre" data-farmer="Mrs Fatima Ali, Kano">
       <img src="img/flavored yogurt.jpg" alt="Product 4" class="product-img" />
       <h2>Fresh Flavored Yogurt</h2>
       <div class="farmer-info">
@@ -277,7 +278,7 @@
     </div>
 
     <div class="checkout">
-      <a href="/checkout.html">Proceed to Checkout <span>→</span></a>
+      <a href="/shoppingcart2.html">Proceed to Checkout <span>→</span></a>
     </div>
    
    
@@ -334,5 +335,89 @@
     <div class="footer-bottom">
         <p>&copy; 2025 FarmFoodHub. All rights reserved.</p>
     </div>
+
+
+    <!-- Overlay for View Details -->
+    <div class="overlay">
+      <div class="overlay-card">
+        <span class="overlay-close">&times;</span>
+        <img id="overlay-img" src="" alt="Product Image" class="overlay-img" />
+        <h2 id="overlay-title"></h2>
+        <div class="farmer-info">
+          <img id="overlay-farmer-img" src="" alt="Farmer Logo" />
+          <p id="overlay-farmer"></p>
+        </div>
+        <div class="price-rating">
+          <p id="overlay-price" class="price"></p>
+          <p id="overlay-stock"></p>
+        </div>
+        <div class="rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+          <p id="overlay-reviews">(28 reviews)</p>
+        </div>
+      </div>
+    </div>
+    
+    
+    <!-- JavaScript -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const cartBadge = document.querySelector('.cart-badge');
+        const overlay = document.querySelector('.overlay');
+        const overlayCard = document.querySelector('.overlay-card');
+        const overlayImg = document.getElementById('overlay-img');
+        const overlayTitle = document.getElementById('overlay-title');
+        const overlayFarmerImg = document.getElementById('overlay-farmer-img');
+        const overlayFarmer = document.getElementById('overlay-farmer');
+        const overlayPrice = document.getElementById('overlay-price');
+        const overlayStock = document.getElementById('overlay-stock');
+        const overlayReviews = document.getElementById('overlay-reviews');
+        const overlayClose = document.querySelector('.overlay-close');
+
+        let cartCount = 0;
+
+        // Add to Cart functionality
+        document.querySelectorAll('.btn-add').forEach(button => {
+          button.addEventListener('click', () => {
+            cartCount++;
+            cartBadge.textContent = cartCount;
+          });
+        });
+
+        // View Details functionality
+        document.querySelectorAll('.btn-details').forEach(button => {
+          button.addEventListener('click', (e) => {
+            const product = e.target.closest('.product');
+            overlayImg.src = product.querySelector('.product-img').src;
+            overlayTitle.textContent = product.querySelector('h2').textContent;
+            overlayFarmerImg.src = product.querySelector('.farmer-info img').src;
+            overlayFarmer.textContent = product.querySelector('.farmer-info p').textContent;
+            overlayPrice.textContent = product.querySelector('.price').textContent;
+            overlayStock.textContent = product.querySelector('.price-rating p:last-child').textContent;
+            overlayReviews.textContent = product.querySelector('.rating p').textContent;
+
+            overlay.style.display = 'flex';
+
+          });
+        });
+
+        // Close Overlay
+        overlayClose.addEventListener('click', () => {
+          overlay.style.display = 'none';
+        });
+
+        // Close Overlay when clicking outside
+        overlay.addEventListener('click', (e) => {
+          if (e.target === overlay) {
+            overlay.style.display = 'none';
+          }
+        });
+      });
+
+    </script>
   </body>
 </html>

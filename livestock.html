@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FarmFoodHub</title>
+    <title>FarmFoodHub - Livestock</title>
     <link rel="stylesheet" href="./livestock.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
         integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
@@ -19,6 +19,7 @@
             <div class="search">
                 <input type="text" class="search-input" placeholder="Search for fresh farm products">
                 <i class="fas fa-shopping-cart cart"></i>
+                <span class="cart-badge">0</span>
                 <i class="fas fa-search search-icon"></i>
             </div>
         </div>
@@ -35,7 +36,7 @@
         <div class="products-section">
 
             <!-- Product 1 -->
-            <div class="product">
+            <div class="product" data-name="Dairy Cattles" data-price="$3/kg" data-farmer="Mr Donatus Clement, Minna">
                 <img src="img/dairy cattles.jpg" alt="Product 1" class="product-img" />
                 <h2>Dairy Cattles</h2>
                 <div class="farmer-info">
@@ -61,7 +62,7 @@
             </div>
 
             <!-- Product 2 -->
-            <div class="product">
+            <div class="product" data-name="Reef Cattles" data-price="$5/kg" data-farmer="Mrs Amina Yusuf, Abuja">
                 <img src="img/reef.jpg" alt="Product 2" class="product-img" />
                 <h2>Reef Cattles</h2>
                 <div class="farmer-info">
@@ -69,7 +70,7 @@
                     <p>Mrs Amina Yusuf, Abuja</p>
                 </div>
                 <div class="price-rating">
-                    <p class="price">$5.00/litre</p>
+                    <p class="price">$5.00/kg</p>
                     <p>In Stock</p>
                 </div>
                 <div class="rating">
@@ -87,7 +88,7 @@
             </div>
 
             <!-- Product 3 -->
-            <div class="product">
+            <div class="product" data-name="Sheep" data-price="$8/kg" data-farmer="Mr James Obi, Kaduna">
                 <img src="img/sheep.jpg" alt="Product 3" class="product-img" />
                 <h2>Sheep</h2>
                 <div class="farmer-info">
@@ -113,7 +114,7 @@
             </div>
 
             <!-- Product 4 -->
-            <div class="product">
+            <div class="product" data-name="Goats" data-price="$4/kg" data-farmer="Mrs Fatima Ali, Kano">
                 <img src="img/goat.jpg" alt="Product 4" class="product-img" />
                 <h2>Goats</h2>
                 <div class="farmer-info">
@@ -121,7 +122,7 @@
                     <p>Mrs Fatima Ali, Kano</p>
                 </div>
                 <div class="price-rating">
-                    <p class="price">$4.00/litre</p>
+                    <p class="price">$4.00/kg</p>
                     <p>In Stock</p>
                 </div>
                 <div class="rating">
@@ -140,7 +141,7 @@
 
 
             <!-- Product 5 -->
-            <div class="product">
+            <div class="product" data-name="Rabbits" data-price="$4/kg" data-farmer="Mrs Fatima Ali, Kano">
                 <img src="img/rbbit.jpg" alt="Product 4" class="product-img" />
                 <h2>Rabbits</h2>
                 <div class="farmer-info">
@@ -148,7 +149,7 @@
                     <p>Mrs Fatima Ali, Kano</p>
                 </div>
                 <div class="price-rating">
-                    <p class="price">$4.00/litre</p>
+                    <p class="price">$4.00/kg</p>
                     <p>In Stock</p>
                 </div>
                 <div class="rating">
@@ -167,7 +168,7 @@
 
 
             <!-- Product 6 -->
-            <div class="product">
+            <div class="product" data-name="Cows" data-price="$4/kg" data-farmer="Mrs Fatima Ali, Kano">
                 <img src="img/cow.jpg" alt="Product 4" class="product-img" />
                 <h2>Cows</h2>
                 <div class="farmer-info">
@@ -175,7 +176,7 @@
                     <p>Mrs Fatima Ali, Kano</p>
                 </div>
                 <div class="price-rating">
-                    <p class="price">$4.00/litre</p>
+                    <p class="price">$4.00/kg</p>
                     <p>In Stock</p>
                 </div>
                 <div class="rating">
@@ -193,7 +194,7 @@
             </div>
 
             <!-- Product 7 -->
-            <div class="product">
+            <div class="product" data-name="Camels" data-price="$12/kg" data-farmer="Mrs Fatima Ali, Kano">
                 <img src="img/camel.jpg" alt="Product 4" class="product-img" />
                 <h2>Camels</h2>
                 <div class="farmer-info">
@@ -201,7 +202,7 @@
                     <p>Mrs Fatima Ali, Kano</p>
                 </div>
                 <div class="price-rating">
-                    <p class="price">$4.00/litre</p>
+                    <p class="price">$12.00/kg</p>
                     <p>In Stock</p>
                 </div>
                 <div class="rating">
@@ -219,7 +220,7 @@
             </div>
 
             <!-- Product 8 -->
-            <div class="product">
+            <div class="product" data-name="Horses" data-price="$10/kg" data-farmer="Mrs Fatima Ali, Kano">
                 <img src="img/horse.jpg" alt="Product 4" class="product-img" />
                 <h2>Horses</h2>
                 <div class="farmer-info">
@@ -227,7 +228,7 @@
                     <p>Mrs Fatima Ali, Kano</p>
                 </div>
                 <div class="price-rating">
-                    <p class="price">$4.00/litre</p>
+                    <p class="price">$10.00/kg</p>
                     <p>In Stock</p>
                 </div>
                 <div class="rating">
@@ -245,7 +246,7 @@
             </div>
 
             <!-- Product 9 -->
-            <div class="product">
+            <div class="product" data-name="Fish" data-price="$4/kg" data-farmer="Mrs Fatima Ali, Kano">
                 <img src="img/fish.jpg" alt="Product 4" class="product-img" />
                 <h2>Fish</h2>
                 <div class="farmer-info">
@@ -253,7 +254,7 @@
                     <p>Mrs Fatima Ali, Kano</p>
                 </div>
                 <div class="price-rating">
-                    <p class="price">$4.00/litre</p>
+                    <p class="price">$4.00/kg</p>
                     <p>In Stock</p>
                 </div>
                 <div class="rating">
@@ -273,7 +274,7 @@
         </div>
 
         <div class="checkout">
-            <a href="/checkout.html">Proceed to Checkout <span>→</span></a>
+            <a href="/shoppingcart2.html">Proceed to Checkout <span>→</span></a>
         </div>
 
     </main>
@@ -328,6 +329,10 @@
     <div class="footer-bottom">
         <p>&copy; 2025 FarmFoodHub. All rights reserved.</p>
     </div>
+
+    
+    
+
 </body>
 
 </html>

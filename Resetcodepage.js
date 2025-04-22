@@ -42,7 +42,7 @@ document.getElementById('code-form').addEventListener('submit', async (e) => {
         verifyBtn.disabled = true;
         
         // Send verification code to API
-        const response = await fetch('http://127.0.0.1:8000/reset-password/', {
+        const response = await fetch('${https://farmfoodhub-backend.onrender.com}/reset-password/',{
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -84,7 +84,7 @@ document.querySelector('.resend-link').addEventListener('click', async (e) => {
     e.preventDefault();
     
     try {
-        const response = await fetch('http://127.0.0.1:8000/resend-code/', {
+        const response = await fetch('${https://farmfoodhub-backend.onrender.com}/reset-password/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

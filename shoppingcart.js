@@ -62,33 +62,78 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
+    // submit.addEventListener("click", function () {
+    //     if (cartCount === 0) {
+    //         alert("Your cart is empty!");
+    //         return;
+    //     }
+
+
+    //     alert("Order Submitted!");
+    //     const sub = formatPrice(subTotalAmount);
+    //     const tot = formatPrice(subTotalAmount + 6); 
+
+    //     console.log("Subtotal: " + sub);
+    //     console.log("Total: " + tot);
+
+    //     cartCount = 0;
+    //     subTotalAmount = 0;
+
+    //     items.forEach(function (item) {
+    //         const counting = item.querySelector(".result");
+    //         const note = item.querySelector(".tot");
+    //         counting.textContent = 0;
+    //         if (note) note.textContent = formatPrice(0);
+    //     });
+
+    //     cartIcon.textContent = cartCount;
+    //     subTotal.textContent = "Subtotal: " + formatPrice(subTotalAmount);
+    //     Total.textContent = "Total: " + formatPrice(subTotalAmount + 6);
+    //     window.location.href = "orderconfirm.html";
+
+    // });
+
+
+
     submit.addEventListener("click", function () {
         if (cartCount === 0) {
             alert("Your cart is empty!");
             return;
         }
-
-
-        alert("Order Submitted!");
-        const sub = formatPrice(subTotalAmount);
-        const tot = formatPrice(subTotalAmount + 6); 
-
-        console.log("Subtotal: " + sub);
-        console.log("Total: " + tot);
-
-        cartCount = 0;
-        subTotalAmount = 0;
-
+    
+        const taxAmount = subTotalAmount * 0.05;
+        const deliveryAmount = subTotalAmount * 0.10;
+        const totalAmount = subTotalAmount + taxAmount + deliveryAmount;
+    
+        const orderItems = [];
+    
         items.forEach(function (item) {
-            const counting = item.querySelector(".result");
-            const note = item.querySelector(".tot");
-            counting.textContent = 0;
-            if (note) note.textContent = formatPrice(0);
+            const name = item.getAttribute("data-name");
+            const price = parseFloat(item.getAttribute("data-price"));
+            const count = parseInt(item.querySelector(".result").textContent);
+    
+            if (count > 0) {
+                orderItems.push({
+                    name: name,
+                    price: price,
+                    quantity: count,
+                    total: count * price
+                });
+            }
         });
-
-        cartIcon.textContent = cartCount;
-        subTotal.textContent = "Subtotal: " + formatPrice(subTotalAmount);
-        Total.textContent = "Total: " + formatPrice(subTotalAmount + 6);
+    
+        const orderData = {
+            subtotal: subTotalAmount,
+            tax: taxAmount,
+            delivery: deliveryAmount,
+            total: totalAmount,
+            currency: currentCurrency,
+            items: orderItems
+        };
+    
+        localStorage.setItem("orderInfo", JSON.stringify(orderData));
+    
+        window.location.href = "orderconfirm.html";
     });
 
     reset.addEventListener("click", function () {

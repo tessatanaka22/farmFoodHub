@@ -62,11 +62,12 @@
 
 <div class="second-row"> 
 
-    <div class="payment">
+    <div class="payment" id="order-list">
     <h3>Payment Details</h3>
-    <div class="amount"><h4>Subtotal</h4><p class="rowww">N26,000</p></div>
-    <div class="amount"><h4>Shipping</h4><p>N5,000</p></div>
-    <div class="amount"><h4>Tax</h4><p>$50</p></div>
+    <div class="amount"><h4>Subtotal</h4><span id="sub" class="rowww">$0</span></div>
+    <div class="amount"><h4>Tax</h4><span id="tax">$0</span></div>
+
+    <div class="amount"><h4>Shipping</h4><span id="delivery">$0</span></div>
     <hr style="margin: 10px;">
      <div class="amount"><h3>Total</h3><span id="total">$0</span></div>
     </div>
@@ -141,5 +142,36 @@
 
 
 </section>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const orderData = JSON.parse(localStorage.getItem("orderInfo"));
+    
+        if (!orderData) {
+            document.querySelector(".payment").innerHTML = "<p>No order data found. Please return to the cart.</p>";
+            return;
+        }
+    
+        const exchangeRates = {
+            usd: 1,
+            ngn: 1600,
+            ced: 16
+        };
+    
+        function formatPrice(amount, currency) {
+            if (currency === 'usd') return "$" + amount.toFixed(2);
+            if (currency === 'ngn') return "₦" + (amount * exchangeRates.ngn).toFixed(2);
+            if (currency === 'ced') return "C" + (amount * exchangeRates.ced).toFixed(2);
+        }
+    
+        const currency = orderData.currency;
+    
+        document.getElementById("sub").textContent = formatPrice(orderData.subtotal, currency);
+        document.getElementById("tax").textContent = formatPrice(orderData.tax, currency);
+        document.getElementById("delivery").textContent = formatPrice(orderData.delivery, currency);
+        document.getElementById("total").textContent = formatPrice(orderData.total, currency);
+    });
+    </script>    
 </body>
 </html>

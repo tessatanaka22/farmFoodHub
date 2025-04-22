@@ -37,6 +37,11 @@ nav ul li a:hover {
   color: #4caf50;
 }
 
+nav ul li a.about {
+  font-weight: bold;
+  color: #4caf50;
+}
+
 .nav-buttons {
   margin-top: 24px;
 }

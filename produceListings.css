@@ -202,14 +202,16 @@ body {
 }
 
 .produce-details h4 {
-    text-align: center;
+    text-align:center;
     margin-bottom: 5px;
+    font-size: 0.9rem;
 }
 
 .produce-details p {
     margin: 5px 0;
     font-size: 0.9rem;
     color: #555;
+    text-align: center;
 }
 
 .category-section {

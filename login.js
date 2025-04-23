@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
       password: pass,
     };
     console.log("praise");
-    fetch("https://farmfoodhub-backend.onrender.com/login/", {
+    fetch("https://farmfoodhub-backend.onrender.com/api/login/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

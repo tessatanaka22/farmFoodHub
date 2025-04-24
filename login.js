@@ -37,10 +37,13 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log("Login Response Data:", data);
         // Save auth data
         localStorage.setItem("token", data.token);
-        localStorage.setItem("role", data.role);
+
+        const userRoleRaw = data.role || "";
+        console.log("Extracted role:", userRoleRaw);
+        localStorage.setItem("role", userRoleRaw);
 
         // Redirect based on user role
-        const userRole = (localStorage.getItem("role") || "").toUpperCase();
+        const userRole = userRoleRaw.trim().toUpperCase();
         setTimeout(() => {
           switch (userRole) {
             case "FARMER":

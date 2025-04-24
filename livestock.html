@@ -1,338 +1,416 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FarmFoodHub - Livestock</title>
     <link rel="stylesheet" href="./livestock.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
 
-<body>
+  <body>
     <!-- heaader -->
     <header>
-        <div class="header">
-            <img src="img/logo.png" alt="logo" />
-            <div class="search">
-                <input type="text" class="search-input" placeholder="Search for fresh farm products">
-                <i class="fas fa-shopping-cart cart"></i>
-                <span class="cart-badge">0</span>
-                <i class="fas fa-search search-icon"></i>
-            </div>
+      <div class="header">
+        <img src="img/logo.png" alt="logo" />
+        <div class="search">
+          <input
+            type="text"
+            class="search-input"
+            placeholder="Search for fresh farm products"
+          />
+          <i class="fas fa-shopping-cart cart"></i>
+          <span class="cart-badge">0</span>
+          <i class="fas fa-search search-icon"></i>
         </div>
+      </div>
     </header>
     <main>
-        <!-- hero section -->
-        <div class="hero-section">
-            <h1>Livestock</h1>
-            <p>Discover our selection of quality, locally raised livestock. Bring home the taste of farm-fresh goodness, straight from our pastures to your plate.</p>
+      <!-- hero section -->
+      <div class="hero-section">
+        <h1>Livestock</h1>
+        <p>
+          Discover our selection of quality, locally raised livestock. Bring
+          home the taste of farm-fresh goodness, straight from our pastures to
+          your plate.
+        </p>
+      </div>
+
+      <!-- products section -->
+      <div class="products-section">
+        <!-- Product 1 -->
+        <div
+          class="product"
+          data-name="Dairy Cattles"
+          data-price="$3/kg"
+          data-farmer="Mr Donatus Clement, Minna"
+        >
+          <img
+            src="img/dairy cattles.jpg"
+            alt="Product 1"
+            class="product-img"
+          />
+          <h2>Dairy Cattles</h2>
+          <div class="farmer-info">
+            <img src="img/male farmer.jpg" alt="Farmer Logo" />
+            <p>Mr Donatus Clement, Minna</p>
+          </div>
+          <div class="price-rating">
+            <p class="price">$3/kg</p>
+            <p>In Stock</p>
+          </div>
+          <div class="rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+            <p>(28 reviews)</p>
+          </div>
+          <div class="btns">
+            <button class="btn-add">Add to Cart</button>
+            <button class="btn-details">View Details</button>
+          </div>
         </div>
 
-
-        <!-- products section -->
-        <div class="products-section">
-
-            <!-- Product 1 -->
-            <div class="product" data-name="Dairy Cattles" data-price="$3/kg" data-farmer="Mr Donatus Clement, Minna">
-                <img src="img/dairy cattles.jpg" alt="Product 1" class="product-img" />
-                <h2>Dairy Cattles</h2>
-                <div class="farmer-info">
-                    <img src="img/male farmer.jpg" alt="Farmer Logo" />
-                    <p>Mr Donatus Clement, Minna</p>
-                </div>
-                <div class="price-rating">
-                    <p class="price">$3/kg</p>
-                    <p>In Stock</p>
-                </div>
-                <div class="rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
-                    <p>(28 reviews)</p>
-                </div>
-                <div class="btns">
-                    <button class="btn-add">Add to Cart</button>
-                    <button class="btn-details">View Details</button>
-                </div>
-            </div>
-
-            <!-- Product 2 -->
-            <div class="product" data-name="Reef Cattles" data-price="$5/kg" data-farmer="Mrs Amina Yusuf, Abuja">
-                <img src="img/reef.jpg" alt="Product 2" class="product-img" />
-                <h2>Reef Cattles</h2>
-                <div class="farmer-info">
-                    <img src="img/female farmer.jpg" alt="Farmer Logo" />
-                    <p>Mrs Amina Yusuf, Abuja</p>
-                </div>
-                <div class="price-rating">
-                    <p class="price">$5.00/kg</p>
-                    <p>In Stock</p>
-                </div>
-                <div class="rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                    <p>(45 reviews)</p>
-                </div>
-                <div class="btns">
-                    <button class="btn-add">Add to Cart</button>
-                    <button class="btn-details">View Details</button>
-                </div>
-            </div>
-
-            <!-- Product 3 -->
-            <div class="product" data-name="Sheep" data-price="$8/kg" data-farmer="Mr James Obi, Kaduna">
-                <img src="img/sheep.jpg" alt="Product 3" class="product-img" />
-                <h2>Sheep</h2>
-                <div class="farmer-info">
-                    <img src="img/male farmer.jpg" alt="Farmer Logo" />
-                    <p>Mr James Obi, Kaduna</p>
-                </div>
-                <div class="price-rating">
-                    <p class="price">$8.00/kg</p>
-                    <p>In Stock</p>
-                </div>
-                <div class="rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
-                    <p>(20 reviews)</p>
-                </div>
-                <div class="btns">
-                    <button class="btn-add">Add to Cart</button>
-                    <button class="btn-details">View Details</button>
-                </div>
-            </div>
-
-            <!-- Product 4 -->
-            <div class="product" data-name="Goats" data-price="$4/kg" data-farmer="Mrs Fatima Ali, Kano">
-                <img src="img/goat.jpg" alt="Product 4" class="product-img" />
-                <h2>Goats</h2>
-                <div class="farmer-info">
-                    <img src="img/female farmer.jpg" alt="Farmer Logo" />
-                    <p>Mrs Fatima Ali, Kano</p>
-                </div>
-                <div class="price-rating">
-                    <p class="price">$4.00/kg</p>
-                    <p>In Stock</p>
-                </div>
-                <div class="rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                    <i class="far fa-star"></i>
-                    <p>(30 reviews)</p>
-                </div>
-                <div class="btns">
-                    <button class="btn-add">Add to Cart</button>
-                    <button class="btn-details">View Details</button>
-                </div>
-            </div>
-
-
-            <!-- Product 5 -->
-            <div class="product" data-name="Rabbits" data-price="$4/kg" data-farmer="Mrs Fatima Ali, Kano">
-                <img src="img/rbbit.jpg" alt="Product 4" class="product-img" />
-                <h2>Rabbits</h2>
-                <div class="farmer-info">
-                    <img src="img/female farmer.jpg" alt="Farmer Logo" />
-                    <p>Mrs Fatima Ali, Kano</p>
-                </div>
-                <div class="price-rating">
-                    <p class="price">$4.00/kg</p>
-                    <p>In Stock</p>
-                </div>
-                <div class="rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                    <i class="far fa-star"></i>
-                    <p>(30 reviews)</p>
-                </div>
-                <div class="btns">
-                    <button class="btn-add">Add to Cart</button>
-                    <button class="btn-details">View Details</button>
-                </div>
-            </div>
-
-
-            <!-- Product 6 -->
-            <div class="product" data-name="Cows" data-price="$4/kg" data-farmer="Mrs Fatima Ali, Kano">
-                <img src="img/cow.jpg" alt="Product 4" class="product-img" />
-                <h2>Cows</h2>
-                <div class="farmer-info">
-                    <img src="img/female farmer.jpg" alt="Farmer Logo" />
-                    <p>Mrs Fatima Ali, Kano</p>
-                </div>
-                <div class="price-rating">
-                    <p class="price">$4.00/kg</p>
-                    <p>In Stock</p>
-                </div>
-                <div class="rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                    <i class="far fa-star"></i>
-                    <p>(30 reviews)</p>
-                </div>
-                <div class="btns">
-                    <button class="btn-add">Add to Cart</button>
-                    <button class="btn-details">View Details</button>
-                </div>
-            </div>
-
-            <!-- Product 7 -->
-            <div class="product" data-name="Camels" data-price="$12/kg" data-farmer="Mrs Fatima Ali, Kano">
-                <img src="img/camel.jpg" alt="Product 4" class="product-img" />
-                <h2>Camels</h2>
-                <div class="farmer-info">
-                    <img src="img/female farmer.jpg" alt="Farmer Logo" />
-                    <p>Mrs Fatima Ali, Kano</p>
-                </div>
-                <div class="price-rating">
-                    <p class="price">$12.00/kg</p>
-                    <p>In Stock</p>
-                </div>
-                <div class="rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                    <i class="far fa-star"></i>
-                    <p>(30 reviews)</p>
-                </div>
-                <div class="btns">
-                    <button class="btn-add">Add to Cart</button>
-                    <button class="btn-details">View Details</button>
-                </div>
-            </div>
-
-            <!-- Product 8 -->
-            <div class="product" data-name="Horses" data-price="$10/kg" data-farmer="Mrs Fatima Ali, Kano">
-                <img src="img/horse.jpg" alt="Product 4" class="product-img" />
-                <h2>Horses</h2>
-                <div class="farmer-info">
-                    <img src="img/female farmer.jpg" alt="Farmer Logo" />
-                    <p>Mrs Fatima Ali, Kano</p>
-                </div>
-                <div class="price-rating">
-                    <p class="price">$10.00/kg</p>
-                    <p>In Stock</p>
-                </div>
-                <div class="rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                    <i class="far fa-star"></i>
-                    <p>(30 reviews)</p>
-                </div>
-                <div class="btns">
-                    <button class="btn-add">Add to Cart</button>
-                    <button class="btn-details">View Details</button>
-                </div>
-            </div>
-
-            <!-- Product 9 -->
-            <div class="product" data-name="Fish" data-price="$4/kg" data-farmer="Mrs Fatima Ali, Kano">
-                <img src="img/fish.jpg" alt="Product 4" class="product-img" />
-                <h2>Fish</h2>
-                <div class="farmer-info">
-                    <img src="img/female farmer.jpg" alt="Farmer Logo" />
-                    <p>Mrs Fatima Ali, Kano</p>
-                </div>
-                <div class="price-rating">
-                    <p class="price">$4.00/kg</p>
-                    <p>In Stock</p>
-                </div>
-                <div class="rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                    <i class="far fa-star"></i>
-                    <p>(30 reviews)</p>
-                </div>
-                <div class="btns">
-                    <button class="btn-add">Add to Cart</button>
-                    <button class="btn-details">View Details</button>
-                </div>
-            </div>
-
+        <!-- Product 2 -->
+        <div
+          class="product"
+          data-name="Reef Cattles"
+          data-price="$5/kg"
+          data-farmer="Mrs Amina Yusuf, Abuja"
+        >
+          <img src="img/reef.jpg" alt="Product 2" class="product-img" />
+          <h2>Reef Cattles</h2>
+          <div class="farmer-info">
+            <img src="img/female farmer.jpg" alt="Farmer Logo" />
+            <p>Mrs Amina Yusuf, Abuja</p>
+          </div>
+          <div class="price-rating">
+            <p class="price">$5.00/kg</p>
+            <p>In Stock</p>
+          </div>
+          <div class="rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            <p>(45 reviews)</p>
+          </div>
+          <div class="btns">
+            <button class="btn-add">Add to Cart</button>
+            <button class="btn-details">View Details</button>
+          </div>
         </div>
 
-        <div class="checkout">
-            <a href="/shoppingcart2.html">Proceed to Checkout <span>→</span></a>
+        <!-- Product 3 -->
+        <div
+          class="product"
+          data-name="Sheep"
+          data-price="$8/kg"
+          data-farmer="Mr James Obi, Kaduna"
+        >
+          <img src="img/sheep.jpg" alt="Product 3" class="product-img" />
+          <h2>Sheep</h2>
+          <div class="farmer-info">
+            <img src="img/male farmer.jpg" alt="Farmer Logo" />
+            <p>Mr James Obi, Kaduna</p>
+          </div>
+          <div class="price-rating">
+            <p class="price">$8.00/kg</p>
+            <p>In Stock</p>
+          </div>
+          <div class="rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+            <p>(20 reviews)</p>
+          </div>
+          <div class="btns">
+            <button class="btn-add">Add to Cart</button>
+            <button class="btn-details">View Details</button>
+          </div>
         </div>
 
+        <!-- Product 4 -->
+        <div
+          class="product"
+          data-name="Goats"
+          data-price="$4/kg"
+          data-farmer="Mrs Fatima Ali, Kano"
+        >
+          <img src="img/goat.jpg" alt="Product 4" class="product-img" />
+          <h2>Goats</h2>
+          <div class="farmer-info">
+            <img src="img/female farmer.jpg" alt="Farmer Logo" />
+            <p>Mrs Fatima Ali, Kano</p>
+          </div>
+          <div class="price-rating">
+            <p class="price">$4.00/kg</p>
+            <p>In Stock</p>
+          </div>
+          <div class="rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            <i class="far fa-star"></i>
+            <p>(30 reviews)</p>
+          </div>
+          <div class="btns">
+            <button class="btn-add">Add to Cart</button>
+            <button class="btn-details">View Details</button>
+          </div>
+        </div>
+
+        <!-- Product 5 -->
+        <div
+          class="product"
+          data-name="Rabbits"
+          data-price="$4/kg"
+          data-farmer="Mrs Fatima Ali, Kano"
+        >
+          <img src="img/rbbit.jpg" alt="Product 4" class="product-img" />
+          <h2>Rabbits</h2>
+          <div class="farmer-info">
+            <img src="img/female farmer.jpg" alt="Farmer Logo" />
+            <p>Mrs Fatima Ali, Kano</p>
+          </div>
+          <div class="price-rating">
+            <p class="price">$4.00/kg</p>
+            <p>In Stock</p>
+          </div>
+          <div class="rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            <i class="far fa-star"></i>
+            <p>(30 reviews)</p>
+          </div>
+          <div class="btns">
+            <button class="btn-add">Add to Cart</button>
+            <button class="btn-details">View Details</button>
+          </div>
+        </div>
+
+        <!-- Product 6 -->
+        <div
+          class="product"
+          data-name="Cows"
+          data-price="$4/kg"
+          data-farmer="Mrs Fatima Ali, Kano"
+        >
+          <img src="img/cow.jpg" alt="Product 4" class="product-img" />
+          <h2>Cows</h2>
+          <div class="farmer-info">
+            <img src="img/female farmer.jpg" alt="Farmer Logo" />
+            <p>Mrs Fatima Ali, Kano</p>
+          </div>
+          <div class="price-rating">
+            <p class="price">$4.00/kg</p>
+            <p>In Stock</p>
+          </div>
+          <div class="rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            <i class="far fa-star"></i>
+            <p>(30 reviews)</p>
+          </div>
+          <div class="btns">
+            <button class="btn-add">Add to Cart</button>
+            <button class="btn-details">View Details</button>
+          </div>
+        </div>
+
+        <!-- Product 7 -->
+        <div
+          class="product"
+          data-name="Camels"
+          data-price="$12/kg"
+          data-farmer="Mrs Fatima Ali, Kano"
+        >
+          <img src="img/camel.jpg" alt="Product 4" class="product-img" />
+          <h2>Camels</h2>
+          <div class="farmer-info">
+            <img src="img/female farmer.jpg" alt="Farmer Logo" />
+            <p>Mrs Fatima Ali, Kano</p>
+          </div>
+          <div class="price-rating">
+            <p class="price">$12.00/kg</p>
+            <p>In Stock</p>
+          </div>
+          <div class="rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            <i class="far fa-star"></i>
+            <p>(30 reviews)</p>
+          </div>
+          <div class="btns">
+            <button class="btn-add">Add to Cart</button>
+            <button class="btn-details">View Details</button>
+          </div>
+        </div>
+
+        <!-- Product 8 -->
+        <div
+          class="product"
+          data-name="Horses"
+          data-price="$10/kg"
+          data-farmer="Mrs Fatima Ali, Kano"
+        >
+          <img src="img/horse.jpg" alt="Product 4" class="product-img" />
+          <h2>Horses</h2>
+          <div class="farmer-info">
+            <img src="img/female farmer.jpg" alt="Farmer Logo" />
+            <p>Mrs Fatima Ali, Kano</p>
+          </div>
+          <div class="price-rating">
+            <p class="price">$10.00/kg</p>
+            <p>In Stock</p>
+          </div>
+          <div class="rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            <i class="far fa-star"></i>
+            <p>(30 reviews)</p>
+          </div>
+          <div class="btns">
+            <button class="btn-add">Add to Cart</button>
+            <button class="btn-details">View Details</button>
+          </div>
+        </div>
+
+        <!-- Product 9 -->
+        <div
+          class="product"
+          data-name="Fish"
+          data-price="$4/kg"
+          data-farmer="Mrs Fatima Ali, Kano"
+        >
+          <img src="img/fish.jpg" alt="Product 4" class="product-img" />
+          <h2>Fish</h2>
+          <div class="farmer-info">
+            <img src="img/female farmer.jpg" alt="Farmer Logo" />
+            <p>Mrs Fatima Ali, Kano</p>
+          </div>
+          <div class="price-rating">
+            <p class="price">$4.00/kg</p>
+            <p>In Stock</p>
+          </div>
+          <div class="rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            <i class="far fa-star"></i>
+            <p>(30 reviews)</p>
+          </div>
+          <div class="btns">
+            <button class="btn-add">Add to Cart</button>
+            <button class="btn-details">View Details</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="checkout">
+        <a href="/shoppingcart2.html">Proceed to Checkout <span>→</span></a>
+      </div>
     </main>
-
-
-
-
-
 
     <!-- Footer -->
     <footer>
-        <div class="first-row">
-            <img src="/img/logo.png" alt="logo" />
-            <p>
-                Connecting farmers, consumers, and food banks for a sustainable future
-            </p>
-            <div class="social-icons-footer">
-                <i class="fab fa-facebook"></i>
-                <i class="fab fa-twitter twitter"></i>
-                <i class="fab fa-instagram instagram"></i>
-                <i class="fab fa-linkedin"></i>
-            </div>
+      <div class="first-row">
+        <img src="/img/logo.png" alt="logo" />
+        <p>
+          Connecting farmers, consumers, and food banks for a sustainable future
+        </p>
+        <div class="social-icons-footer">
+          <i class="fab fa-facebook"></i>
+          <i class="fab fa-twitter twitter"></i>
+          <i class="fab fa-instagram instagram"></i>
+          <i class="fab fa-linkedin"></i>
         </div>
+      </div>
 
-        <div class="second-row">
-            <h3>Quick Links</h3>
-            <p>Home</p>
-            <p>About Us</p>
-            <p>Shop</p>
-        </div>
+      <div class="second-row">
+        <h3>Quick Links</h3>
+        <p>Home</p>
+        <p>About Us</p>
+        <p>Shop</p>
+      </div>
 
-        <div class="third-row">
-            <h3>Your Role</h3>
-            <p>Farmer</p>
-            <p>Consumer</p>
-            <p>Food Bank</p>
-            <p>Donor</p>
-        </div>
+      <div class="third-row">
+        <h3>Your Role</h3>
+        <p>Farmer</p>
+        <p>Consumer</p>
+        <p>Food Bank</p>
+        <p>Donor</p>
+      </div>
 
-        <div class="fourth-row">
-            <h3>Support</h3>
-            <p>FAQs</p>
-            <p>Privacy Policy</p>
-            <p>Terms of Service</p>
-            <p>Contact Us</p>
-            <!-- <p>Stay updated with our latest news and stories</p>
+      <div class="fourth-row">
+        <h3>Support</h3>
+        <p>FAQs</p>
+        <p>Privacy Policy</p>
+        <p>Terms of Service</p>
+        <p>Contact Us</p>
+        <!-- <p>Stay updated with our latest news and stories</p>
             <input type="email" placeholder="Enter your email" />
             <button class="btn-subscribe">Subscribe</button> -->
-        </div>
+      </div>
     </footer>
     <hr />
     <div class="footer-bottom">
-        <p>&copy; 2025 FarmFoodHub. All rights reserved.</p>
+      <p>&copy; 2025 FarmFoodHub. All rights reserved.</p>
     </div>
 
-    
-    
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const addToCartButtons = document.querySelectorAll(".btn-add");
 
-</body>
+        addToCartButtons.forEach((button) => {
+          button.addEventListener("click", () => {
+            const product = button.closest(".product");
+            const productData = {
+              name: product.dataset.name,
+              price: product.dataset.price,
+              farmer: product.dataset.farmer,
+              image: product.querySelector("img").src,
+            };
 
+            // Get current cart from localStorage
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+            // Add new product
+            cart.push(productData);
+
+            // Save back to localStorage
+            localStorage.setItem("cart", JSON.stringify(cart));
+
+            // Update badge
+            document.querySelector(".cart-badge").textContent = cart.length;
+          });
+        });
+
+        // Update cart badge on load
+        const currentCart = JSON.parse(localStorage.getItem("cart")) || [];
+        document.querySelector(".cart-badge").textContent = currentCart.length;
+      });
+    </script>
+  </body>
 </html>

@@ -1,69 +1,3 @@
-/*document.addEventListener("DOMContentLoaded", function () {
-  const form = document.getElementById("create-form");
-  let fullName = document.getElementById("name");
-  let emailEl = document.getElementById("contact");
-  let passwordEl = document.getElementById("password");
-  let passwordCheck = document.getElementById("password-check");
-  let box = document.querySelector(".box");
-  let submit = document.getElementById("button");
-
-  submit.addEventListener("click", async function (event) {
-    event.preventDefault();
-    console.log("catherine");
-    let full = fullName.value;
-    let email = emailEl.value;
-    let pass = passwordEl.value;
-    let check = passwordCheck.value;
-    let boxChecked = box.checked;
-
-    if (pass !== check) {
-      console.log("Passwords do not match!");
-      alert("Passwords do not match! Please re-enter.");
-    } else {
-      console.log("Full Name:", full);
-      console.log("Email:", email);
-      console.log("Password:", pass);
-      console.log("Remember Me Checked:", boxChecked);
-
-      let accountInfo = {
-        username: full,
-        email: email,
-        password: pass,
-        confirm_password: check,
-        //rememberMe: boxChecked,
-      };
-      console.log(accountInfo);
-      try {
-        const response = await fetch(
-          "https://farmfoodhub-backend.onrender.com/api/register/",
-          {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify(accountInfo),
-          }
-        );
-
-        if (response.ok) {
-          const result = await response.json();
-          alert("Registration successful!");
-          console.log(result); // You can redirect or clear the form here
-        } else {
-          const error = await response.json();
-          alert("Registration failed: " + (error.detail || "Unknown error"));
-        }
-      } catch (error) {
-        console.error("Error:", error);
-        alert("Something went wrong. Try again later.");
-      }
-
-      alert("Account created successfully!");
-      window.location.href = "login.html";
-    }
-  });
-});*/
-
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("create-form");
   const fullName = document.getElementById("name");
@@ -71,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const passwordEl = document.getElementById("password");
   const passwordCheck = document.getElementById("password-check");
   const box = document.querySelector("input[type='checkbox'].box");
+  const role = document.getElementById("role");
   const submit = document.getElementById("button");
 
   submit.addEventListener("click", async function (event) {
@@ -81,6 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const pass = passwordEl.value;
     const check = passwordCheck.value;
     const boxChecked = box?.checked;
+    const selectedRole = role.value;
 
     // Basic validation
     if (!full || !email || !pass || !check) {
@@ -93,6 +29,11 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
+    if (!selectedRole) {
+      alert("Please select a role.");
+      return;
+    }
+
     // Disable button to prevent multiple submissions
     submit.disabled = true;
     submit.innerText = "Submitting...";
@@ -102,6 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
       email: email,
       password: pass,
       password2: check,
+      role: selectedRole,
     };
     console.log("Username value:", full);
     console.log("Account Info:", accountInfo);

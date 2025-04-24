@@ -97,6 +97,7 @@ li, a {
 .butt{
     background: #328142;
     border: none;
+    color: #fff;
     padding-inline: 80px;
     padding-block: 10px;
     border-radius: 10px;
@@ -113,7 +114,23 @@ li, a {
     }
     
 /* hr */
+.currency{
+    text-align: center;
+    padding: 10px;
+}
+.currency-select{
+    border: 1px solid rgb(73, 226, 59);
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 5px;
 
+}
+
+
+
+
+
+/* hr */
 .combine{
     display: flex;
     width: 80%;
@@ -290,6 +307,8 @@ margin-top: 20px;
 }
 .complete-butt button{
     background: #328142;
+    color: #fff;
+
     border: none;
     border-radius: 5px;
     padding-inline: 50px;

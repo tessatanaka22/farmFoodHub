@@ -33,32 +33,63 @@
           <p>(555) 123-4567</p><br>
           <p>contact@communityfoodbank.org</p>
         </div>
-        <div><button>Edit Profile</button></div>
+        <div>
+  <button id="editBtn" onclick="toggleEdit()">Edit Profile</button>
+</div>
+
         </div>
-        
         <section class="about">
-            <h2>About Us</h2>
-            <p>Serving our community since 1995. Community is dedicated to fighting hunger and providing nutritious <br/>
+  <h2>About Us</h2>
+  <p id="aboutText">Serving our community since 1995. Community is dedicated to fighting unger and providing nutritious <br/>
                to families in need throughout the Seattle area</p>
-        </section>
+</section>
+
+      
         <hr>
         <section class="operations">
           <h2>Operating Hours</h2>
             <div class="operating-hrs">
                 
-                <div class="mon"><h3>Monday-Friday:</h3>
-                <p>9:00am-5:00pm</p></div>
-                <div Class="sat"><h3>Saturday:</h3>
-                <p>10:00am - 2:00pm</p></div>
-            </div>
+                <div class="mon">
+  <h3>Monday-Friday:</h3>
+  <p id="weekdayText">9:00am-5:00pm</p>
+</div>
+
             <div class="sun"><h3>Sunday</h3>
                 <p>Closed</p>
             </div>
+          </div>
             <hr>
             <h2>Service Area</h2>
             <p class="service">Serving all neighborhoods within Seattle city limits</p>
       </main>
       
-  
+ <script>
+  let editing = false;
+
+  function toggleEdit() {
+    const btn = document.getElementById("editBtn");
+    const aboutText = document.getElementById("aboutText");
+    const weekdayText = document.getElementById("weekdayText");
+
+    if (!editing) {
+      // Turn text into input fields
+      aboutText.innerHTML = `<textarea id="aboutInput">${aboutText.innerText}</textarea>`;
+      weekdayText.innerHTML = `<input id="weekdayInput" value="${weekdayText.innerText}">`;
+      btn.textContent = "Save Profile";
+    } else {
+      // Save the inputs and turn back into plain text
+      const newAbout = document.getElementById("aboutInput").value;
+      const newWeekday = document.getElementById("weekdayInput").value;
+
+      aboutText.textContent = newAbout;
+      weekdayText.textContent = newWeekday;
+      btn.textContent = "Edit Profile";
+    }
+
+    editing = !editing;
+  }
+</script>
+ 
 </body>
 </html>

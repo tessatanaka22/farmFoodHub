@@ -1,115 +1,82 @@
-/*document.addEventListener("DOMContentLoaded", function() {
-    let emailInfo = document.getElementById("email");
-    let password = document.getElementById("password");
-    let remindBox = document.querySelector(".box");
-    let button = document.getElementById("button");
-
-    button.addEventListener("click", function() {
-        let email = emailInfo.value;
-        let pass = password.value;
-        let rememberMe = remindBox.checked;
-
-        console.log("Email:", email);
-        console.log("Password:", pass);
-        console.log("Remember Me:", rememberMe);
-
-        if (email === "user@example.com" && pass === "password123") {
-            let alertMessage = "Login successful!";
-            
-        
-            if (rememberMe) {
-                localStorage.setItem("email", email);
-                localStorage.setItem("password", pass);
-            }
-
-            let customAlert = document.getElementById("customAlert");
-            let messageSpan = document.getElementById("alertMessage");
-            messageSpan.textContent = alertMessage;
-            customAlert.style.display = "block";
-
-            setTimeout(function() {
-                window.location.href = "dashboard.html";  
-            }, 2000);
-
-        } else {
-            let alertMessage = "Invalid email or password!";
-            let customAlert = document.getElementById("customAlert");
-            let messageSpan = document.getElementById("alertMessage");
-            messageSpan.textContent = alertMessage;
-            customAlert.style.display = "block";
-
-            setTimeout(function() {
-                customAlert.style.display = "none";
-            }, 5000);
-        }
-
-        setTimeout(function() {
-            customAlert.style.display = "none";
-        }, 10000);
-    });
-});*/
-
 document.addEventListener("DOMContentLoaded", function () {
-  let emailInfo = document.getElementById("email");
-  let password = document.getElementById("password");
-  let remindBox = document.querySelector(".box");
-  let button = document.getElementById("button");
+  const loginForm = document.getElementById("login-form");
+  const emailInput = document.getElementById("email");
+  const passwordInput = document.getElementById("password");
+  const loginButton = document.getElementById("button");
 
-  button.addEventListener("click", function (e) {
-    e.preventDefault(); // prevent form from submitting the default way
+  loginButton.addEventListener("click", async function (event) {
+    event.preventDefault();
 
-    let email = emailInfo.value.trim();
-    let pass = password.value.trim();
-    let rememberMe = remindBox.checked;
+    const email = emailInput.value.trim();
+    const password = passwordInput.value;
 
-    // Construct the payload to send
-    const data = {
-      email: email,
-      password: pass,
-    };
-    console.log("praise");
-    fetch("https://farmfoodhub-backend.onrender.com/api/login/", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    })
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Login failed");
+    if (!email || !password) {
+      showAlert("Please enter both email and password.", false);
+      return;
+    }
+
+    loginButton.disabled = true;
+    loginButton.innerText = "Logging in...";
+
+    try {
+      const response = await fetch(
+        "https://farmfoodhub-backend.onrender.com/api/login/",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ email, password }),
         }
-        return response.json();
-      })
-      .then((result) => {
-        // Show success message
+      );
+
+      const data = await response.json();
+
+      if (response.ok) {
         showAlert("Login successful!", true);
+        console.log("Login Response Data:", data);
+        // Save auth data
+        localStorage.setItem("token", data.token);
+        localStorage.setItem("role", data.role);
 
-        if (rememberMe) {
-          localStorage.setItem("email", email);
-          localStorage.setItem("token", result.token); // if the backend returns a token
-        }
-
+        // Redirect based on user role
+        const userRole = (localStorage.getItem("role") || "").toUpperCase();
         setTimeout(() => {
-          window.location.href = "dashboard.html";
-        }, 2000);
-      })
-      .catch((error) => {
-        showAlert("Invalid email or password!", false);
-        console.error("Error:", error);
-      });
+          switch (userRole) {
+            case "FARMER":
+              window.location.href = "farmersDashboard.html";
+              break;
+            case "CONSUMER":
+              window.location.href = "consumerDash.html";
+              break;
+            case "FOODBANK":
+              window.location.href = "foodBankDashbord.html";
+              break;
+            default:
+              showAlert("Unknown role. Contact support.", false);
+          }
+        }, 1500);
+      } else {
+        showAlert(data.detail || "Login failed. Try again.", false);
+      }
+    } catch (error) {
+      console.error("Login error:", error);
+      showAlert("Network error. Please try again later.", false);
+    } finally {
+      loginButton.disabled = false;
+      loginButton.innerText = "Sign in";
+    }
   });
 
   function showAlert(message, success = true) {
-    let customAlert = document.getElementById("customAlert");
-    let messageSpan = document.getElementById("alertMessage");
-
+    const customAlert = document.getElementById("customAlert");
+    const messageSpan = document.getElementById("alertMessage");
     customAlert.style.backgroundColor = success ? "#328142" : "#b02a2a";
     messageSpan.textContent = message;
     customAlert.style.display = "block";
 
     setTimeout(() => {
       customAlert.style.display = "none";
-    }, 5000);
+    }, 4000);
   }
 });

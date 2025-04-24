@@ -1,99 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login Page</title>
-    <link rel="stylesheet" href="login.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/c6de6d7637.js" crossorigin="anonymous"></script>
-</head>
-<body>
+    <link rel="stylesheet" href="login.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/c6de6d7637.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
     <div class="header">
-        <div class="page">
-             <div class="start"> 
-            <div class="logo">
-                <img src="./img/white.png" alt="">
+      <div class="page">
+        <div class="start">
+          <div class="logo">
+            <img src="./img/white.png" alt="" />
+          </div>
+          <h1 class="welcome">Welcome back</h1>
+          <p class="sign">Sign in to FarmHub Design</p>
+        </div>
+        <div class="shadow">
+          <form action="">
+            <label for="email"> Email or Phone Number </label>
+
+            <input
+              type="email"
+              placeholder="write your email or number"
+              class="input"
+              id="email"
+              required
+            />
+
+            <label for="password"> Password</label>
+
+            <input
+              type="password"
+              name="password"
+              class="input"
+              id="password"
+              placeholder="Enter your password"
+              required
+              minlength="6"
+            />
+          </form>
+          <div class="login">
+            <span>
+              <input type="checkbox" class="box" />
+              <label for="">Remember me</label>
+            </span>
+
+            <p class="forgot"><a href="" class="for">Forgot password?</a></p>
+          </div>
+          <div class="button">
+            <button class="sign-in" id="button">Sign in</button>
+            <div class="sign-up">
+              <p class="dont">Don't have an account?</p>
+              <a href="create.html" class="up">Sign up</a>
             </div>
-            <h1 class="welcome">Welcome back</h1>
-            <p class="sign">Sign in to FarmHub Design</p>
-</div>
-<div class="shadow">
-<form action="">
-    <label for="email"> Email or Phone Number    </label>
+          </div>
+        </div>
+        <div
+          id="customAlert"
+          style="
+            display: none;
+            background-color: #328142;
+            color: #fff;
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            position: fixed;
+            z-index: 1000;
+          "
+        >
+          <span id="alertMessage"></span>
+        </div>
+      </div>
 
-        <input type="email" placeholder="write your email or number" class="input" id="email" required>
-
-    <label for="password"> Password</label>
-
-    <input type="password" name="password" class="input" id="password" placeholder="Enter your password" required minlength="6">
-
-</form>
-<div class="login">
-  <span>  <input type="checkbox" class="box"> <label for="">Remember me</label> </span>
-
-  <p class="forgot"><a href="" class="for">Forgot password?</a></p>
-
-</div>
-<div class="button">
-<button class="sign-in" id="button">Sign in</button>
-<div class="sign-up"><p class="dont">Don't have an account? </p><a href="create.html" class="up">Sign up</a></div>
-</div>
-</div>
-<div id="customAlert" style="display: none; background-color: #328142; color: #fff; padding: 15px; border: none; border-radius: 5px; position: fixed;  z-index: 1000;">
-    <span id="alertMessage"></span>
-</div>
-</div>
-
-<div class="second-page">
-    <div class="logo-page">
-    <div class="logo2">
-        <img src="./img/white.png" alt="">
+      <div class="second-page">
+        <div class="logo-page">
+          <div class="logo2">
+            <img src="./img/white.png" alt="" />
+          </div>
+          <h4 class="stop">Your one- stop Agricultural Marketplace</h4>
+        </div>
+      </div>
     </div>
-    <h4 class="stop">Your one- stop Agricultural Marketplace</h4>
-    </div>
-</div>
-</div>
 
-
-<footer>
-    <div class="about">
+    <footer>
+      <div class="about">
         <h1 class="about-us">About us</h1>
         <p>Your trusted market place for farm product and livestock</p>
-    </div>
-    <div class="quick">
-            <h1>Quick Links</h1>
-<ul>
-    <a href=""><li>Patners</li></a>
-    <a href=""><li>Services</li></a>
-    <a href=""><li>Shop</li></a>
-    <a href=""><li>About</li></a>
-    <a href=""><li>Home</li></a>
-</ul>
-        </div>
-    <div class="contact">
+      </div>
+      <div class="quick">
+        <h1>Quick Links</h1>
+        <ul>
+          <a href=""><li>Patners</li></a>
+          <a href=""><li>Services</li></a>
+          <a href=""><li>Shop</li></a>
+          <a href=""><li>About</li></a>
+          <a href=""><li>Home</li></a>
+        </ul>
+      </div>
+      <div class="contact">
         <h1>Contact</h1>
         <span><i class="fa-solid fa-phone"></i> +1 234 5678 65</span>
         <a href="mailto:africaagility@gmail.com">
-            <i class="fa-solid fa-envelope"></i> africaagility@gmail.com
-          </a>   
-         </div>
-    <div class="follow">
+          <i class="fa-solid fa-envelope"></i> africaagility@gmail.com
+        </a>
+      </div>
+      <div class="follow">
         <h1>Follow Us</h1>
         <div class="icon">
-            <i class="fa-brands fa-facebook"></i>
-            <i class="fa-brands fa-twitter"></i>
-            <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-instagram"></i>
         </div>
-    </div>
-</footer>
+      </div>
+    </footer>
 
-<div class="last">
-    <i class="fa-regular fa-copyright"></i>    <p class="last-p">2025 FarmfoodPlc. All right reserved</p>
-</div>
+    <div class="last">
+      <i class="fa-regular fa-copyright"></i>
+      <p class="last-p">2025 FarmfoodPlc. All right reserved</p>
+    </div>
 
     <script src="login.js"></script>
-</body>
+  </body>
 </html>

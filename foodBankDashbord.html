@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./foodBankDashbord.css" />
     <title>Food Bank Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
   <body>
     <div class="container">
@@ -12,7 +13,9 @@
         <h2>Food Bank Hub</h2>
         <nav>
           <ul>
-            <li class="active"><a href="./foodBankDashbord.html">Dashboard</a></li>
+            <li class="active">
+              <a href="./foodBankDashbord.html">Dashboard</a>
+            </li>
             <li><a href="./fbProfile.html">Profile</a></li>
             <li><a href="./inventory.html">Inventory</a></li>
             <li><a href="./orders.html">Orders</a></li>
@@ -20,7 +23,7 @@
             <li><a href="./settingsPages.html">Settings</a></li>
           </ul>
         </nav>
-        <button class="logout" ><a href="./">Log Out</a></button>
+        <button class="logout"><a href="./">Log Out</a></button>
       </aside>
 
       <main class="main-content">
@@ -57,7 +60,8 @@
         <section class="inventory-request">
           <div class="inventory chart">
             <h4>Inventory Needs</h4>
-            pie chart goes here
+
+            <canvas id="myPieChart" width="300" height="300"></canvas>
           </div>
           <div class="request-form">
             <h4>Request Surplus Produce</h4>
@@ -81,10 +85,39 @@
             <div>Families Helped</div>
             <div>Total Weight</div>
             <div>Efficiency Rate</div>
-            bar chart goes here
+           
           </div>
+         
         </section>
       </main>
     </div>
+    <script>
+      const ctx = document.getElementById("myPieChart").getContext("2d");
+      const myPieChart = new Chart(ctx, {
+        type: "pie",
+        data: {
+          labels: ["Apples", "Bananas", "Oranges"],
+          datasets: [
+            {
+              label: "Fruits Sold",
+              data: [12, 19, 3],
+              backgroundColor: ["green", "orange", "red"],
+              borderColor: ["green", "orange", "red"],
+              borderWidth: 1,
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: "top",
+            },
+          },
+        },
+      });
+    </script>
+    
+</body>
   </body>
 </html>

@@ -71,6 +71,9 @@ nav ul li a:hover {
 }
 .header {
   background-color: #e1eee6;
+  display: flex;
+  font-weight: 200;
+  font-size: larger;
 }
 h1 {
   padding: 30px;

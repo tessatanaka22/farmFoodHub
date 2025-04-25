@@ -17,7 +17,7 @@ body {
 .sidebar {
   width: 220px;
   background: #e5f3e0;
-  padding:20px;
+  padding: 20px;
   height: 100vh;
 }
 .sidebar h2 {
@@ -46,13 +46,21 @@ body {
 .top {
   display: flex;
 }
+#editBtn {
+  color: whitesmoke;
+  border: 2px solid green;
+  border-radius: 5px;
+  background-color: green;
+  padding: 5px;
+  margin: 8px;
+}
 .summary {
   background: white;
   padding: 20px;
   margin-bottom: 20px;
   border-radius: 8px;
   display: flex;
-  gap: 50px;
+  justify-content: space-between;
 }
 .about {
   padding: 30px;
@@ -65,14 +73,11 @@ body {
 }
 .operating-hrs {
   display: flex;
-  gap: 100px;
-  padding: 30px;
-  margin: 20px;
+  flex-direction: column;
 }
 .sun {
-  padding: 30px;
-  margin: 20px;
 }
 .service {
   background-color: #ffefdb;
+  padding-block: 50px;
 }
